@@ -1,0 +1,85 @@
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.footer-all-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  width: 100%;
+  border-top: 1px solid var(--theme-theme-stroke, #314158);
+  height: 65px;
+}
+.footer-nav-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-nav-name {
+  color: var(--theme-foreground, #90a1b9);
+  font-family: var(--font-family-text, "Fira Code");
+  font-size: var(--font-size-body-md, 16px);
+  font-style: normal;
+  font-weight: 450;
+  line-height: var(--line-height-body-md, 24px); /* 150% */
+  height: 65px;
+  align-content: center;
+  padding: 20px;
+}
+.footer-nav-hello {
+  color: var(--theme-foreground, #90a1b9);
+  font-family: var(--font-family-text, "Fira Code");
+  font-size: var(--font-size-body-md, 16px);
+  font-style: normal;
+  font-weight: 450;
+  line-height: var(--line-height-body-md, 24px); /* 150% */
+  border-left: 1px solid var(--theme-theme-stroke, #314158);
+  border-right: 1px solid var(--theme-theme-stroke, #314158);
+  height: 65px;
+  align-content: center;
+  padding: 20px;
+}
+.footer-nav-about-me {
+  color: var(--theme-foreground, #90a1b9);
+  font-family: var(--font-family-text, "Fira Code");
+  font-size: var(--font-size-body-md, 16px);
+  font-style: normal;
+  font-weight: 450;
+  line-height: var(--line-height-body-md, 24px); /* 150% */
+  height: 65px;
+  align-content: center;
+  padding: 20px;
+}
+.footer-nav-projects {
+  color: var(--theme-foreground, #90a1b9);
+  font-family: var(--font-family-text, "Fira Code");
+  font-size: var(--font-size-body-md, 16px);
+  font-style: normal;
+  font-weight: 450;
+  line-height: var(--line-height-body-md, 24px); /* 150% */
+  border-left: 1px solid var(--theme-theme-stroke, #314158);
+  border-right: 1px solid var(--theme-theme-stroke, #314158);
+  height: 65px;
+  align-content: center;
+  padding: 20px;
+}
+
+.footer-nav-contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--theme-foreground, #90a1b9);
+  font-family: var(--font-family-text, "Fira Code");
+  font-size: var(--font-size-body-md, 16px);
+  font-style: normal;
+  font-weight: 450;
+  line-height: var(--line-height-body-md, 24px); /* 150% */
+  border-left: 1px solid var(--theme-theme-stroke, #314158);
+  height: 65px;
+  align-content: center;
+  padding: 20px;
+}

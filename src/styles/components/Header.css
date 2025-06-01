@@ -1,0 +1,76 @@
+.header-all-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    width: 100%;
+    border-bottom: 1px solid var(--theme-theme-stroke, #314158);
+    height: 65px;
+}
+.header-nav-container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.header-nav-name{
+color: var(--theme-foreground, #90A1B9);
+font-family: var(--font-family-text, "Fira Code");
+font-size: var(--font-size-body-md, 16px);
+font-style: normal;
+font-weight: 450;
+line-height: var(--line-height-body-md, 24px); /* 150% */
+height: 65px;
+align-content: center;
+ padding: 20px 150px 20px 20px;
+}
+.header-nav-hello{
+    color: var(--theme-foreground, #90A1B9);
+font-family: var(--font-family-text, "Fira Code");
+font-size: var(--font-size-body-md, 16px);
+font-style: normal;
+font-weight: 450;
+line-height: var(--line-height-body-md, 24px); /* 150% */
+border-left: 1px solid var(--theme-theme-stroke, #314158);
+border-right: 1px solid var(--theme-theme-stroke, #314158);
+height: 65px;
+align-content: center;
+padding: 20px;
+}
+.header-nav-about-me{
+    color: var(--theme-foreground, #90A1B9);
+font-family: var(--font-family-text, "Fira Code");
+font-size: var(--font-size-body-md, 16px);
+font-style: normal;
+font-weight: 450;
+line-height: var(--line-height-body-md, 24px); /* 150% */
+height: 65px;
+align-content: center;
+padding: 20px;
+}
+.header-nav-projects{
+    color: var(--theme-foreground, #90A1B9);
+font-family: var(--font-family-text, "Fira Code");
+font-size: var(--font-size-body-md, 16px);
+font-style: normal;
+font-weight: 450;
+line-height: var(--line-height-body-md, 24px); /* 150% */
+border-left: 1px solid var(--theme-theme-stroke, #314158);
+border-right: 1px solid var(--theme-theme-stroke, #314158);
+height: 65px;
+align-content: center;
+padding: 20px;
+}   
+.header-nav-contact{
+    color: var(--theme-foreground, #90A1B9);
+font-family: var(--font-family-text, "Fira Code");
+font-size: var(--font-size-body-md, 16px);
+font-style: normal;
+font-weight: 450;
+line-height: var(--line-height-body-md, 24px); /* 150% */
+border-left: 1px solid var(--theme-theme-stroke, #314158);
+height: 65px;
+align-content: center;
+padding: 20px;
+}

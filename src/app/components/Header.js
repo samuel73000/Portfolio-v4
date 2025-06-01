@@ -4,13 +4,13 @@ export default function Header() {
   return <header>
     <div className="header-all-container">
         <div className="header-nav-container">
-            <p>Samuel-Pouard</p>
-            <p>_hello</p>
-            <p>_about-me</p>
-            <p>_projects</p>
+            <p className="header-nav-name">Samuel-Pouard</p>
+            <p className="header-nav-hello">_Hello</p>
+            <p className="header-nav-about-me">_About-Me</p>
+            <p className="header-nav-projects">_Projects</p>
         </div> 
         <div className="header-contact-container">
-        <p>_contact</p>
+        <p className="header-nav-contact">_Contact-me</p>
         </div>
     </div>
   </header>;
