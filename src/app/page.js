@@ -5,6 +5,16 @@ export default function Home() {
   return (
     <section className="section-home">
       <Header />
+      <main>
+        <div>
+        <div className="">
+          <h1>Hello</h1>
+        </div>
+        <div className="">
+         game
+        </div>
+        </div>
+      </main>
       <Footer />
     </section>
   );
