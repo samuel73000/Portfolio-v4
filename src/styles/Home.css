@@ -1,0 +1,24 @@
+.container-home-all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    align-content: center;
+    width: 80%;
+}
+
+.container-home-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    text-align: center;
+}
+
+.container-home-game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+    text-align: center;
+}

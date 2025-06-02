@@ -6,11 +6,11 @@ export default function Home() {
     <section className="section-home">
       <Header />
       <main>
-        <div>
-        <div className="">
+        <div className="container-home-all">
+        <div className="container-home-text">
           <h1>Hello</h1>
         </div>
-        <div className="">
+        <div className="container-home-game">
          game
         </div>
         </div>
