@@ -4,16 +4,96 @@
     align-items: center;
     align-self: stretch;
     align-content: center;
-    width: 80%;
+    width: 100%;
+    height: 1200px;
 }
-
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!texte et titre!!!!!!!!!!!!!!!!!!!! */
 .container-home-text{
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: stretch;
-    text-align: center;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+    gap: 75px;
 }
+.container-home-text-content-1-text-1{
+    color: var(--theme-foreground, #90A1B9);
+    font-family: var(--font-family-text, "Fira Code");
+    font-size: var(--font-size-body-lg, 18px);
+    font-style: normal;
+    font-weight: 450;
+    line-height: var(--line-height-body-lg, 27px); /* 150% */
+}
+
+.container-home-text-content-1-text-2{
+color: var(--theme-heading-foreground, #F8FAFC);
+font-family: var(--font-family-text, "Fira Code");
+font-size: var(--font-size-heading-h1, 60px);
+font-style: normal;
+font-weight: 450;
+line-height: var(--line-height-heading-h1, 66px); /* 110% */
+}
+
+.container-home-text-content-1-text-3{
+    color: var(--primitive-indigo-500, #615FFF);
+    font-family: var(--font-family-text, "Fira Code");
+    font-size: var(--font-size-heading-h4, 30px);
+    font-style: normal;
+    font-weight: 450;
+    line-height: var(--line-height-heading-h4, 42px); /* 140% */
+    width: 19vw;
+}
+
+.container-home-text-content-2-text-1{
+color: var(--theme-foreground, #90A1B9);
+font-family: var(--font-family-text, "Fira Code");
+font-size: var(--font-size-body-md, 17px);
+font-style: normal;
+font-weight: 450;
+line-height: var(--line-height-body-md, 24px); /* 150% */
+margin-bottom: 5px;
+width: 19vw;
+}
+.container-home-text-content-2-text-2{
+    color: var(--primitive-indigo-500, #615FFF);
+    font-family: var(--font-family-text, "Fira Code");
+    font-size: var(--font-size-body-md, 17px);
+    font-style: normal;
+    font-weight: 450;
+    line-height: var(--line-height-body-md, 24px); /* 150% */
+}
+ .span-home-2{
+    color: var(--primitive-teal-400, #00D5BE);
+    font-family: var(--font-family-text, "Fira Code");
+    font-size: var(--font-size-body-md, 17px);
+    font-style: normal;
+    font-weight: 450;
+    line-height: var(--line-height-body-md, 24px);
+ }
+ .span-home-3{
+    color: var(--theme-link-foreground, #FFA1AD);
+    font-family: var(--font-family-text, "Fira Code");
+    font-size: var(--font-size-body-md, 17px);
+    font-style: normal;
+    font-weight: 450;
+    line-height: var(--line-height-body-md, 24px);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: 10%;
+    text-underline-offset: 14%;
+    text-underline-position: from-font;
+ }
+
+
+
+
+
+
+
+/* !!!!!!!!!!!!!!!!!game !!!!!!!!!!!!!!!!!!!!! */
 
 .container-home-game{
     display: flex;
@@ -21,4 +101,6 @@
     align-items: center;
     align-self: stretch;
     text-align: center;
+    width: 50%;
+    height: 100%;
 }
