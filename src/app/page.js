@@ -106,7 +106,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <bouton className='btn-home-game-content-touche'>Skip</bouton>
+                {/* <bouton className='btn-home-game-content-touche'>Skip</bouton> */}
               </div>
             </div>
           </div>
