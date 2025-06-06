@@ -30,7 +30,7 @@ export default function Header() {
           </a>
         </div>
         <div className='header-contact-container'>
-          <p className='header-nav-contact'>_Contact-me</p>
+          <a  href="/contact-me" className='header-nav-contact'>_Contact-me</a>
         </div>
       </div>
     </header>
