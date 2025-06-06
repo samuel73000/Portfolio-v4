@@ -64,6 +64,10 @@ export default function Home() {
           </div>
           <div className='container-home-game'>
             <div className='container-home-game-content'>
+              <img src='/bolt.svg' className='bolt-home-1' />
+              <img src='/bolt.svg' className='bolt-home-2' />
+              <img src='/bolt.svg' className='bolt-home-3' />
+              <img src='/bolt.svg' className='bolt-home-4' />
               <div className='container-home-game-content-game'>
                 <Snake onFoodLeftChange={setFoodLeft} />
               </div>
