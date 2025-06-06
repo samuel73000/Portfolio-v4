@@ -3,18 +3,20 @@ import styles from "../styles/Home.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Typewriter from "typewriter-effect";
-import { Snake } from "react-snake-lib";
+import Snake from "./components/SnakeGame";
+import { useState } from "react"; // déjà présent normalement
 
 export default function Home() {
+  const [foodLeft, setFoodLeft] = useState(30); // AJOUTE CETTE LIGNE
+
   return (
     <section className='section-home'>
       <Header />
       <main>
-     
-      <div className="container-effet--home">
-             <img src="effet-green-home.svg" className="effet-green-home"/>
-              <img src="effet-bleu-home.svg" className="effet-bleu-home"/>
-              </div>
+        <div className='container-effet--home'>
+          <img src='effet-green-home.svg' className='effet-green-home' />
+          <img src='effet-bleu-home.svg' className='effet-bleu-home' />
+        </div>
 
         <div className='container-home-all'>
           <div className='container-home-text'>
@@ -41,13 +43,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className='container-home-text-content-2'> 
-
-            
-         
-
-
-
+            <div className='container-home-text-content-2'>
               <p className='container-home-text-content-2-text-1'>
                 // complete the game to continue
               </p>
@@ -69,40 +65,7 @@ export default function Home() {
           <div className='container-home-game'>
             <div className='container-home-game-content'>
               <div className='container-home-game-content-game'>
-                <Snake
-                  // onScoreChange={onScoreChange}
-                  // onGameOver={onGameOver}
-                  // onGameStart={onGameStart}
-                  width='100%'
-                  height='38.2vh'
-                  bgColor='silver'
-                  innerBorderColor='#b1b0b0'
-                  snakeSpeed={90}
-                  borderColor='black'
-                  snakeColor='#3e3e3e'
-                  snakeHeadColor='#1a1a1a'
-                  appleColor='tomato'
-                  borderRadius={5}
-                  snakeHeadRadius={1}
-                  borderWidth={0}
-                  shakeBoard={true}
-                  boxShadow='rgba(100, 100, 111, 0.2) 0px 7px 29px 0px'
-                  size={20}
-                  startGameText='Start Game'
-                  startButtonStyle={{
-                    color: "white",
-                    padding: "6px 20px",
-                    backgroundColor: "#1a1a1a",
-                    borderRadius: "10px",
-                    fontSize: "17px",
-                    fontWeight: "600",
-                    cursor: "pointer",
-                  }}
-                  startButtonHoverStyle={{
-                    backgroundColor: "#4f4d4d",
-                  }}
-                  noWall={false}
-                />
+                <Snake onFoodLeftChange={setFoodLeft} />
               </div>
               <div className='container-home-game-content-touche-all'>
                 <div className='container-home-game-content-touche'>
@@ -133,18 +96,9 @@ export default function Home() {
                     // food left
                   </p>
                   <div className='container-home-content-food-img'>
-                    <img src='snake-food.svg' alt='snake food' />
-                    <img src='snake-food.svg' alt='snake food' />
-                    <img src='snake-food.svg' alt='snake food' />
-                    <img src='snake-food.svg' alt='snake food' />
-                    <img src='snake-food.svg' alt='snake food' />
-                    <img src='snake-food.svg' alt='snake food' />
-                    <img src='snake-food.svg' alt='snake food' />
-                    <img src='snake-food.svg' alt='snake food' />
-                    <img src='snake-food.svg' alt='snake food' />
-                    <img src='snake-food.svg' alt='snake food' />
-                    <img src='snake-food.svg' alt='snake food' />
-                    <img src='snake-food.svg' alt='snake food' />
+                    {[...Array(foodLeft)].map((_, index) => (
+                      <img key={index} src='snake-food.svg' alt='snake food' />
+                    ))}
                   </div>
                 </div>
 

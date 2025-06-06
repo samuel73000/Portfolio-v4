@@ -144,6 +144,7 @@
 }
 .container-home-game-content-game {
   width: 65%;
+  position: relative;
 }
 .container-home-game-content-touche-all {
   display: flex;
