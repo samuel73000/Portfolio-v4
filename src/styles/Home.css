@@ -1,3 +1,29 @@
+.container-effet--home {
+    position: absolute; /* ou fixed si tu veux qu'il reste à l'écran au scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 95vh;
+    z-index: 0; /* plus bas que le reste */
+    pointer-events: none; /* pour ne pas gêner les clics sur le jeu */
+    overflow: hidden;
+  }
+  
+  .effet-green-home,
+  .effet-bleu-home {
+    position: absolute;
+    /* Place-les où tu veux sur la page, par exemple : */
+    top: 8%;
+    left: 50%;
+    opacity: 0.5;
+    /* Personnalise selon l'effet désiré */
+  }
+  .effet-bleu-home {
+    top: 30%;
+    left: 60%;
+    opacity: 0.4;
+  }
+
 .container-home-all {
   display: flex;
   justify-content: center;
@@ -214,3 +240,9 @@
   margin-top:200px;
   margin-left: 5vw;
 }
+
+
+
+
+
+

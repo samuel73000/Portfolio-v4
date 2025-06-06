@@ -10,6 +10,12 @@ export default function Home() {
     <section className='section-home'>
       <Header />
       <main>
+     
+      <div className="container-effet--home">
+             <img src="effet-green-home.svg" className="effet-green-home"/>
+              <img src="effet-bleu-home.svg" className="effet-bleu-home"/>
+              </div>
+
         <div className='container-home-all'>
           <div className='container-home-text'>
             <div className='container-home-text-content-1'>
@@ -35,7 +41,13 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className='container-home-text-content-2'>
+            <div className='container-home-text-content-2'> 
+
+            
+         
+
+
+
               <p className='container-home-text-content-2-text-1'>
                 // complete the game to continue
               </p>
