@@ -20,11 +20,11 @@
   padding: var(--4, 12px);
   flex-direction: column;
   align-items: flex-start;
-  gap: var(--3, 8px);
+
   align-self: stretch;
   border: solid 1px #314158;
   border-top: none;
-  width: 83.8%;
+  width: 200px;
   height: 85.6vh;
   position: relative;
 }
@@ -43,7 +43,8 @@
   padding-bottom: 12px;
   display: flex;
   align-items: center;
-  gap: 8px; 
+  gap: 8px;
+  cursor: pointer;
 }
 
 .titre-persoInfo-about-1::after {
@@ -57,84 +58,91 @@
   width: auto;
 }
 
-.container-menu-persoInfo-about-1{
-    color: var(--primitive-slate-50, #90A1B9);
-    font-family: var(--font-family-text, "Fira Code");
-    font-size: var(--font-size-body-md, 16px);
-    font-style: normal;
-    font-weight: 450;
-    line-height: var(--line-height-body-md, 24px); /* 150% */
-    border-bottom: none;
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
-    padding-bottom: 12px;
-    padding-top:4px ;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.container-menu-persoInfo-about-1 {
+  color: var(--primitive-slate-50, #90a1b9);
+  font-family: var(--font-family-text, "Fira Code");
+  font-size: var(--font-size-body-md, 16px);
+  font-style: normal;
+  font-weight: 450;
+  line-height: var(--line-height-body-md, 24px); /* 150% */
+  border-bottom: none;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding-bottom: 12px;
+  padding-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .container-menu-persoInfo-about-1::after {
-    content: "";
-    position: absolute;
-    left: calc(-1 * var(--4, 12px));
-    right: calc(-1 * var(--4, 12px));
-    bottom: 0;
-    height: 1px;
-    background: #314158;
-    width: auto;
-  }
-
-
-.contacts-persoInfo-about-1{
-color: var(--primitive-slate-50, #F8FAFC);
-font-family: var(--font-family-text, "Fira Code");
-font-size: var(--font-size-body-md, 16px);
-font-style: normal;
-font-weight: 450;
-line-height: var(--line-height-body-md, 24px); /* 150% */
-
-border-bottom: none;
-    width: 100%;
-    box-sizing: border-box;
-    position: relative;
-    padding-bottom: 12px;
-    padding-top:3px ;
-    display: flex;
-    align-items: center;
-    gap: 8px; 
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--4, 12px));
+  right: calc(-1 * var(--4, 12px));
+  bottom: 0;
+  height: 1px;
+  background: #314158;
+  width: auto;
 }
-.contacts-persoInfo-about-1::after{
-    content: "";
-    position: absolute;
-    left: calc(-1 * var(--4, 12px));
-    right: calc(-1 * var(--4, 12px));
-    bottom: 0;
-    height: 1px;
-    background: #314158;
-    width: auto;
+
+.contacts-persoInfo-about-1 {
+  color: var(--primitive-slate-50, #f8fafc);
+  font-family: var(--font-family-text, "Fira Code");
+  font-size: var(--font-size-body-md, 16px);
+  font-style: normal;
+  font-weight: 450;
+  line-height: var(--line-height-body-md, 24px); /* 150% */
+
+  border-bottom: none;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  padding-bottom: 12px;
+  padding-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
 }
-.container-persoInfo-mail-about-1{
-    color: var(--theme-foreground, #90A1B9);
-font-family: var(--font-family-text, "Fira Code");
-font-size: var(--font-size-body-md, 16px);
-font-style: normal;
-font-weight: 450;
-line-height: var(--line-height-body-md, 24px); /* 150% */
-white-space: nowrap;        /* Ne pas aller à la ligne */
-overflow: hidden;           /* Masquer ce qui dépasse */
-text-overflow: ellipsis;
-width: 100%;
-padding-bottom: 12px;
-padding-top:3px;
-display: flex;
-flex-direction: column;
-gap: 12px;
+.contacts-persoInfo-about-1::after {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--4, 12px));
+  right: calc(-1 * var(--4, 12px));
+  bottom: 0;
+  height: 1px;
+  background: #314158;
+  width: auto;
+}
+.container-persoInfo-mail-about-1 {
+  color: var(--theme-foreground, #90a1b9);
+  font-family: var(--font-family-text, "Fira Code");
+  font-size: var(--font-size-body-md, 16px);
+  font-style: normal;
+  font-weight: 450;
+  line-height: var(--line-height-body-md, 24px); /* 150% */
+  white-space: nowrap; /* Ne pas aller à la ligne */
+  overflow: hidden; /* Masquer ce qui dépasse */
+  text-overflow: ellipsis;
+  width: 100%;
+  padding-bottom: 12px;
+  padding-top: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .container-menu-persoInfo-about-1 p,
 .container-persoInfo-mail-about-1 p {
   display: flex;
   align-items: center;
-  gap: 8px; 
+  gap: 8px;
+}
+
+.fleche-contact-about-1 {
+  transform: rotate(270deg);
+}
+.fleche-titre-about-1 {
+  transform: rotate(270deg);
 }
