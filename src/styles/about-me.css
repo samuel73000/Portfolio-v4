@@ -24,11 +24,13 @@
   align-self: stretch;
   border: solid 1px #314158;
   border-top: none;
-  width: 200px;
+  width: 201px;
   height: 84.55vh;
   position: relative;
 }
-
+.content-section-about {
+  margin-left: 13.5%;
+}
 .titre-persoInfo-about-1 {
   color: var(--primitive-slate-50, #f8fafc);
   font-family: var(--font-family-text, "Fira Code");
@@ -140,9 +142,51 @@
   gap: 8px;
 }
 
-.fleche-contact-about-1 {
-  transform: rotate(270deg);
+/* !!!!!!!!!!!!!!!!!!!!section 2 !!!!!!!!!!!!!!!! */
+.section-about-2 {
+  width: 48%;
 }
-.fleche-titre-about-1 {
-  transform: rotate(270deg);
+.container-header-all-about-2{
+    display: flex;
+}
+.container-header-about-2 {
+  color: var(--theme-foreground, #90a1b9);
+  font-family: var(--font-family-text, "Fira Code");
+  font-size: var(--font-size-body-md, 16px);
+  font-style: normal;
+  font-weight: 450;
+  line-height: var(--line-height-body-md, 24px); /* 150% */
+  height: 50px;
+  box-sizing: border-box;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding-bottom: 12px;
+  display: flex;
+  position: relative;
+  border: 1px solid #314158;
+  border-top: none;
+  border-left: none;
+  vertical-align: middle;
+  width: 242px;
+  padding: var(--4, 12px) var(--6, 24px);
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+} 
+
+.container-header-about-2 img {
+  height: 1em; /* adapte la hauteur à celle du texte */
+  width: auto; /* garde le ratio de l'image */
+  display: inline-block; /* s'assure que l'image s'aligne avec le texte */
+  vertical-align: middle;
+  margin: 0; /* enlève tout espace autour */
+  padding: 0;
+}
+.container-header-2-about-2{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #314158;
+    border-top: none;
+    border-left: none;
 }

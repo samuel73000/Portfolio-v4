@@ -7,6 +7,9 @@ import { useState } from "react";
 export default function About() {
   const [openInfo, setOpenInfo] = useState(true);
   const [openContacts, setOpenContacts] = useState(false);
+  const [openBio, setOpenBio] = useState(false);
+  const [openInterests, setOpenInterests] = useState(false);
+  const [openEducation, setOpenEducation] = useState(false);
 
   return (
     <section>
@@ -41,18 +44,65 @@ export default function About() {
                 paddingTop: openInfo ? "4px" : "0",
                 paddingBottom: openInfo ? "12px" : "0",
               }}>
-              <p>
-                <img src='/icon-arrow-bio-grise-about.svg' />
+              <p
+                className='titre-section-about'
+                onClick={() => setOpenBio((o) => !o)}
+                style={{ cursor: "pointer" }}>
+                <img
+                  src='/icon-arrow-bio-grise-about.svg'
+                  style={{
+                    transform: openBio ? "rotate(90deg)" : "rotate(0deg)",
+                    transition: "transform 0.2s",
+                  }}
+                />
                 <img src='/icon-bio-about.svg' /> bio
               </p>
-              <p>
-                <img src='/icon-arrow-bio-grise-about.svg' />
+              {openBio && (
+                <div className='content-section-about'>
+                  <p><img src="icon-markdown-about.svg"/>Samuel Pouard</p>
+                </div>
+              )}
+              <p
+                className='titre-section-about'
+                onClick={() => setOpenInterests((o) => !o)}
+                style={{ cursor: "pointer" }}>
+                <img
+                  src='/icon-arrow-bio-grise-about.svg'
+                  style={{
+                    transform: openInterests
+                      ? "rotate(90deg)"
+                      : "rotate(0deg)",
+                    transition: "transform 0.2s",
+                  }}
+                />
                 <img src='/icon-interests-about.svg' /> interests
               </p>
-              <p>
-                <img src='/icon-arrow-bio-grise-about.svg' />
+              {openInterests && (
+                <div className='content-section-about'>
+                 <p><img src="icon-markdown-about.svg"/> Passsion</p>
+                </div>
+              )}
+              <p
+                className='titre-section-about'
+                onClick={() => setOpenEducation((o) => !o)}
+                style={{ cursor: "pointer" }}>
+                <img
+                  src='/icon-arrow-bio-grise-about.svg'
+                  style={{
+                    transform: openEducation
+                      ? "rotate(90deg)"
+                      : "rotate(0deg)",
+                    transition: "transform 0.2s",
+                  }}
+                />
                 <img src='/icon-education-about.svg' /> education
               </p>
+              {openEducation && (
+                <div className='content-section-about'>
+                    <p><img src="icon-markdown-about.svg"/> High-school</p>
+    
+                </div>
+              )}
             </div>
             <p
               className={`contacts-persoInfo-about-1`}
@@ -84,7 +134,20 @@ export default function About() {
             </div>
           </div>
         </section>
-        <section className='section-about-2'></section>
+        {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!section 2!!!!!!!!!!!!!!!!!!!!! */}
+        <section className='section-about-2'>
+            <div className="container-header-all-about-2">
+        <div className="container-header-about-2">
+            <p>education </p>
+            <img src="icon-close.svg"/>
+        </div>
+        <div className="container-header-2-about-2"></div>
+        </div>
+        <div className="container-content-about-2">
+            <div className="numero--content-about-2"></div>
+            <div className="texte-content-about-2"></div>
+        </div>
+        </section>
         <section className='section-about-3'></section>
       </main>
       <Footer />
