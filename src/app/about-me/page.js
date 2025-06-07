@@ -3,6 +3,8 @@ import "../../styles/about-me.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useState } from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 export default function About() {
   const [openInfo, setOpenInfo] = useState(true);
@@ -10,7 +12,15 @@ export default function About() {
   const [openBio, setOpenBio] = useState(false);
   const [openInterests, setOpenInterests] = useState(false);
   const [openEducation, setOpenEducation] = useState(false);
-
+  const code = `
+ function initializeModelChunk<T>(chunk: ResolvedModelChunk): T {
+  const value: T = parseModel(chunk._response, chunk._value);
+  const initializedChunk: InitializedChunk<T> = (chunk: any);
+  initializedChunk._status = INITIALIZED;
+  initializedChunk._value = value;
+  return value;
+}
+  `;
   return (
     <section>
       <Header />
@@ -59,7 +69,10 @@ export default function About() {
               </p>
               {openBio && (
                 <div className='content-section-about'>
-                  <p><img src="icon-markdown-about.svg"/>Samuel Pouard</p>
+                  <p>
+                    <img src='icon-markdown-about.svg' />
+                    Samuel Pouard
+                  </p>
                 </div>
               )}
               <p
@@ -69,9 +82,7 @@ export default function About() {
                 <img
                   src='/icon-arrow-bio-grise-about.svg'
                   style={{
-                    transform: openInterests
-                      ? "rotate(90deg)"
-                      : "rotate(0deg)",
+                    transform: openInterests ? "rotate(90deg)" : "rotate(0deg)",
                     transition: "transform 0.2s",
                   }}
                 />
@@ -79,7 +90,9 @@ export default function About() {
               </p>
               {openInterests && (
                 <div className='content-section-about'>
-                 <p><img src="icon-markdown-about.svg"/> Passsion</p>
+                  <p>
+                    <img src='icon-markdown-about.svg' /> Passsion
+                  </p>
                 </div>
               )}
               <p
@@ -89,9 +102,7 @@ export default function About() {
                 <img
                   src='/icon-arrow-bio-grise-about.svg'
                   style={{
-                    transform: openEducation
-                      ? "rotate(90deg)"
-                      : "rotate(0deg)",
+                    transform: openEducation ? "rotate(90deg)" : "rotate(0deg)",
                     transition: "transform 0.2s",
                   }}
                 />
@@ -99,8 +110,9 @@ export default function About() {
               </p>
               {openEducation && (
                 <div className='content-section-about'>
-                    <p><img src="icon-markdown-about.svg"/> High-school</p>
-    
+                  <p>
+                    <img src='icon-markdown-about.svg' /> High-school
+                  </p>
                 </div>
               )}
             </div>
@@ -136,19 +148,112 @@ export default function About() {
         </section>
         {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!section 2!!!!!!!!!!!!!!!!!!!!! */}
         <section className='section-about-2'>
-            <div className="container-header-all-about-2">
-        <div className="container-header-about-2">
-            <p>education </p>
-            <img src="icon-close.svg"/>
-        </div>
-        <div className="container-header-2-about-2"></div>
-        </div>
-        <div className="container-content-about-2">
-            <div className="numero--content-about-2"></div>
-            <div className="texte-content-about-2"></div>
-        </div>
+          <div className='container-header-all-about-2'>
+            <div className='container-header-about-2'>
+              <p>Samuel Pouard </p>
+              <img src='icon-close.svg' />
+            </div>
+            <div className='container-header-2-about-2'></div>
+          </div>
+
+          <div className='container-content-about-2'>
+            <div className='numero--content-about-2'>
+              {[...Array(41)].map((_, index) => (
+                <p key={index}>{index + 1}</p>
+              ))}
+            </div>
+            <div className='texte-content-about-2'>
+              <h2>About me</h2>
+              <p>
+                /** * About me * I have 5 years of еxperience in web *
+                development lorem ipsum dolor sit amet, * consectetur adipiscing
+                elit, sed do eiusmod * tempor incididunt ut labore et dolore *
+                magna aliqua. Ut enim ad minim veniam, * quis nostrud
+                exercitation ullamco laboris * nisi ut aliquip ex ea commodo
+                consequat. * Duis aute irure dolor in reprehenderit in * * Duis
+                aute irure dolor in reprehenderit in * voluptate velit esse
+                cillum dolore eu fugiat * nulla pariatur. Excepteur sint
+                occaecat * officia deserunt mollit anim id est laborum. */
+              </p>
+            </div>
+          </div>
         </section>
-        <section className='section-about-3'></section>
+        {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!section 3 !!!!!!!!!!!!!!!!!!!!!!! */}
+        <section className='section-about-3'>
+          <div className='container-header-about-3'></div>
+
+          <div className='container-content-all-about-3'>
+            <div className='container-content-left-about-3'>
+              <div className='bloc-about'></div>
+            </div>
+
+            <div className='container-content-about-3'>
+              <h2 className='titre-about-3'>// Code snippet showcase:</h2>
+
+              <div>
+                <div className='container-main-content-code-about-3'>
+                  <div className='container-code-texte-content-about-3'>
+                    <img src='avatar-1-about.svg' />
+                    <div className='container-code-texte-username-all-content-about-3'>
+                      <div className='container-code-texte-username-content-about-3'>
+                        <h3>@username</h3>
+                        <p>created 5 months ago</p>
+                      </div>
+                      <div className='container-code-texte-details-content-about-3'>
+                        <p>
+                          {" "}
+                          <img src='Icon-comment-about.svg' /> details
+                        </p>
+                        <p>
+                          {" "}
+                          <img src='Stars-Icon-pleine-about.svg' /> 3 stars
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <SyntaxHighlighter
+                    language='javascript'
+                    style={vscDarkPlus}
+                    className='container-code-content-about-3'>
+                    {code}
+                  </SyntaxHighlighter>
+                </div>
+              </div>
+
+              <div className='container-main-content-code-about-3'>
+                <div className='container-code-texte-content-about-3'>
+                  <img src='avatar-2-about.svg' />
+                  <div className='container-code-texte-username-all-content-about-3'>
+                    <div className='container-code-texte-username-content-about-3'>
+                      <h3>@username</h3>
+                      <p>created 5 months ago</p>
+                    </div>
+                    <div className='container-code-texte-details-content-about-3'>
+                      <p>
+                        {" "}
+                        <img src='Icon-comment-about.svg' /> details
+                      </p>
+                      <p>
+                        {" "}
+                        <img src='Stars-Icon-vide-about.svg' /> 3 stars
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <SyntaxHighlighter
+                  language='javascript'
+                  style={vscDarkPlus}
+                  className='container-code-content-about-3'>
+                  {code}
+                </SyntaxHighlighter>
+              </div>
+            </div>
+
+            <div className='container-content-right-about-3'>
+              <div className='bloc-about'></div>
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </section>
