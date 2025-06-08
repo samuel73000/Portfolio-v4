@@ -12,6 +12,19 @@ export default function About() {
   const [openBio, setOpenBio] = useState(false);
   const [openInterests, setOpenInterests] = useState(false);
   const [openEducation, setOpenEducation] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [displayedContent, setDisplayedContent] = useState({
+    title: "Samuel Pouard",
+    content: `/** * About me * I have 5 years of еxperience in web *
+    development lorem ipsum dolor sit amet, * consectetur adipiscing
+    elit, sed do eiusmod * tempor incididunt ut labore et dolore *
+    magna aliqua. Ut enim ad minim veniam, * quis nostrud
+    exercitation ullamco laboris * nisi ut aliquip ex ea commodo
+    consequat. * Duis aute irure dolor in reprehenderit in * * Duis
+    aute irure dolor in reprehenderit in * voluptate velit esse
+    cillum dolore eu fugiat * nulla pariatur. Excepteur sint
+    occaecat * officia deserunt mollit anim id est laborum. */`,
+  });
   const code = `
  function initializeModelChunk<T>(chunk: ResolvedModelChunk): T {
   const value: T = parseModel(chunk._response, chunk._value);
@@ -21,6 +34,55 @@ export default function About() {
   return value;
 }
   `;
+
+  const handleContentClick = (type) => {
+    switch (type) {
+      case "bio":
+        setDisplayedContent({
+          title: "Samuel Pouard",
+          content: `/** * About me * I have 5 years of еxperience in web *
+          development lorem ipsum dolor sit amet, * consectetur adipiscing
+          elit, sed do eiusmod * tempor incididunt ut labore et dolore *
+          magna aliqua. Ut enim ad minim veniam, * quis nostrud
+          exercitation ullamco laboris * nisi ut aliquip ex ea commodo
+          consequat. * Duis aute irure dolor in reprehenderit in * * Duis
+          aute irure dolor in reprehenderit in * voluptate velit esse
+          cillum dolore eu fugiat * nulla pariatur. Excepteur sint
+          occaecat * officia deserunt mollit anim id est laborum. */`,
+        });
+        setIsHeaderVisible(true);
+        break;
+      case "interests":
+        setDisplayedContent({
+          title: "Passion",
+          content: `/** * My interests and passions * I am passionate about web development,
+          * particularly in creating beautiful and * functional user interfaces.
+          * I enjoy exploring new technologies * and staying up to date with
+          * the latest trends in web development. * I also love photography
+          * and outdoor activities. */`,
+        });
+        setIsHeaderVisible(true);
+        break;
+      case "education":
+        setDisplayedContent({
+          title: "High-school",
+          content: `/** * Education * I completed my high school education with
+          * a focus on computer science and mathematics. * This foundation
+          * helped me develop strong analytical * and problem-solving skills
+          * that I use in my daily work. */`,
+        });
+        setIsHeaderVisible(true);
+        break;
+      case "close":
+        setDisplayedContent({
+          title: "",
+          content: "",
+        });
+        setIsHeaderVisible(false);
+        break;
+    }
+  };
+
   return (
     <section>
       <Header />
@@ -71,7 +133,11 @@ export default function About() {
                 <div className='content-section-about'>
                   <p>
                     <img src='icon-markdown-about.svg' />
-                    Samuel Pouard
+                    <span
+                      onClick={() => handleContentClick("bio")}
+                      style={{ cursor: "pointer" }}>
+                      Samuel Pouard
+                    </span>
                   </p>
                 </div>
               )}
@@ -91,7 +157,12 @@ export default function About() {
               {openInterests && (
                 <div className='content-section-about'>
                   <p>
-                    <img src='icon-markdown-about.svg' /> Passsion
+                    <img src='icon-markdown-about.svg' />
+                    <span
+                      onClick={() => handleContentClick("interests")}
+                      style={{ cursor: "pointer" }}>
+                      Passsion
+                    </span>
                   </p>
                 </div>
               )}
@@ -111,7 +182,12 @@ export default function About() {
               {openEducation && (
                 <div className='content-section-about'>
                   <p>
-                    <img src='icon-markdown-about.svg' /> High-school
+                    <img src='icon-markdown-about.svg' />
+                    <span
+                      onClick={() => handleContentClick("education")}
+                      style={{ cursor: "pointer" }}>
+                      High-school
+                    </span>
                   </p>
                 </div>
               )}
@@ -149,9 +225,21 @@ export default function About() {
         {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!section 2!!!!!!!!!!!!!!!!!!!!! */}
         <section className='section-about-2'>
           <div className='container-header-all-about-2'>
-            <div className='container-header-about-2'>
-              <p>Samuel Pouard </p>
-              <img src='icon-close.svg' />
+            <div
+              className='container-header-about-2'
+              style={{
+                borderRight: isHeaderVisible ? "1px solid #314158" : "none",
+              }}>
+              <p>{displayedContent.title}</p>
+              <img
+                src='icon-close.svg'
+                onClick={() => handleContentClick("close")}
+                // style={{ cursor: "pointer" }}
+                style={{
+                  display: isHeaderVisible ? "flex" : "none",
+                  cursor: "pointer",
+                }}
+              />
             </div>
             <div className='container-header-2-about-2'></div>
           </div>
@@ -164,17 +252,7 @@ export default function About() {
             </div>
             <div className='texte-content-about-2'>
               <h2>About me</h2>
-              <p>
-                /** * About me * I have 5 years of еxperience in web *
-                development lorem ipsum dolor sit amet, * consectetur adipiscing
-                elit, sed do eiusmod * tempor incididunt ut labore et dolore *
-                magna aliqua. Ut enim ad minim veniam, * quis nostrud
-                exercitation ullamco laboris * nisi ut aliquip ex ea commodo
-                consequat. * Duis aute irure dolor in reprehenderit in * * Duis
-                aute irure dolor in reprehenderit in * voluptate velit esse
-                cillum dolore eu fugiat * nulla pariatur. Excepteur sint
-                occaecat * officia deserunt mollit anim id est laborum. */
-              </p>
+              <p>{displayedContent.content}</p>
             </div>
           </div>
         </section>
