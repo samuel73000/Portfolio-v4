@@ -1,6 +1,8 @@
 .main-about {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  overflow-x: hidden;
 }
 .container-logo {
   display: flex;
@@ -144,7 +146,8 @@
 
 /* !!!!!!!!!!!!!!!!!!!!section 2 !!!!!!!!!!!!!!!! */
 .section-about-2 {
-  width: 40%;
+  flex: 1;
+  min-width: 0; /* Permet à la section de se rétrécir en dessous de sa largeur de contenu */
 }
 .container-header-all-about-2 {
   display: flex;
@@ -225,14 +228,15 @@
   margin: 0;
   padding: 0;
 }
-.texte-content-about-2 h2 {
+.texte-content-about-2 h1 {
   margin: 10px 0 10% 0px;
   text-align: center;
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!section 3 !!!!!!!!!!!!!!!!!!!!!!! */
 .section-about-3 {
-  width: 47.5%;
+  flex: 1;
+  min-width: 0; /* Permet à la section de se rétrécir en dessous de sa largeur de contenu */
 }
 
 .container-header-about-3 {
@@ -280,14 +284,14 @@
   align-items: flex-start;
   gap: var(--10, 64px);
 }
-.titre-about-3{
- color: var(--theme-foreground, #90A1B9);
-font-family: var(--font-family-text, "Fira Code");
-font-size: var(--font-size-body-lg, 18px);
-font-style: normal;
-font-weight: 450;
-line-height: var(--line-height-body-lg, 27px); /* 150% */
-margin-top: 10px;
+.titre-about-3 {
+  color: var(--theme-foreground, #90a1b9);
+  font-family: var(--font-family-text, "Fira Code");
+  font-size: var(--font-size-body-lg, 18px);
+  font-style: normal;
+  font-weight: 450;
+  line-height: var(--line-height-body-lg, 27px); /* 150% */
+  margin-top: 10px;
 }
 
 .container-main-content-code-about-3 {
@@ -358,14 +362,14 @@ margin-top: 10px;
   height: 16px;
   aspect-ratio: 1/1;
 }
-.container-code-content-about-3{
-    display: flex;
-height: 177px;
-padding: var(--5, 16px);
-align-items: flex-start;
-gap: var(--5, 16px);
-align-self: stretch;
-border-radius: var(--4, 16px);
-border: 1px solid var(--theme-theme-stroke, #314158);
-background: var(--theme-theme-backdrop, #020618);
+.container-code-content-about-3 {
+  display: flex;
+  height: 177px;
+  padding: var(--5, 16px);
+  align-items: flex-start;
+  gap: var(--5, 16px);
+  align-self: stretch;
+  border-radius: var(--4, 16px);
+  border: 1px solid var(--theme-theme-stroke, #314158);
+  background: var(--theme-theme-backdrop, #020618);
 }

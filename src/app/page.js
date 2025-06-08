@@ -14,8 +14,8 @@ export default function Home() {
       <Header />
       <main>
         <div className='container-effet--home'>
-          <img src='effet-green-home.svg' className='effet-green-home' />
-          <img src='effet-bleu-home.svg' className='effet-bleu-home' />
+          <img src='effet-green-home.svg' className='effet-green-home' alt="background" />
+          <img src='effet-bleu-home.svg' className='effet-bleu-home' alt="background"/>
         </div>
 
         <div className='container-home-all'>
@@ -64,10 +64,10 @@ export default function Home() {
           </div>
           <div className='container-home-game'>
             <div className='container-home-game-content'>
-              <img src='/bolt.svg' className='bolt-home-1' />
-              <img src='/bolt.svg' className='bolt-home-2' />
-              <img src='/bolt.svg' className='bolt-home-3' />
-              <img src='/bolt.svg' className='bolt-home-4' />
+              <img src='/bolt.svg' className='bolt-home-1' alt="bolt" />
+              <img src='/bolt.svg' className='bolt-home-2' alt="bolt"/>
+              <img src='/bolt.svg' className='bolt-home-3' alt="bolt"/>
+              <img src='/bolt.svg' className='bolt-home-4' alt="bolt"/>
               <div className='container-home-game-content-game'>
                 <Snake onFoodLeftChange={setFoodLeft} />
               </div>

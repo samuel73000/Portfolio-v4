@@ -88,9 +88,9 @@ export default function About() {
       <Header />
       <main className='main-about'>
         <div className='container-logo'>
-          <img src='/about-menu-icons-1.svg' />
-          <img src='/about-menu-icons-2.svg' />
-          <img src='/about-menu-icons-3.svg' />
+          <img src='/about-menu-icons-1.svg' alt="icons" />
+          <img src='/about-menu-icons-2.svg' alt="icons" />
+          <img src='/about-menu-icons-3.svg' alt="icons" />
         </div>
         <section className='section-about-1'>
           <div className='container-persoInfo-about-1'>
@@ -98,6 +98,7 @@ export default function About() {
               className={"titre-persoInfo-about-1"}
               onClick={() => setOpenInfo((o) => !o)}>
               <img
+              alt="icons"
                 className='fleche-titre-about-1'
                 src='/icon-arrow-about-pleine.svg'
                 style={{
@@ -121,18 +122,19 @@ export default function About() {
                 onClick={() => setOpenBio((o) => !o)}
                 style={{ cursor: "pointer" }}>
                 <img
+                alt="icons"
                   src='/icon-arrow-bio-grise-about.svg'
                   style={{
                     transform: openBio ? "rotate(90deg)" : "rotate(0deg)",
                     transition: "transform 0.2s",
                   }}
                 />
-                <img src='/icon-bio-about.svg' /> bio
+                <img src='/icon-bio-about.svg' alt="icons" /> bio
               </p>
               {openBio && (
                 <div className='content-section-about'>
                   <p>
-                    <img src='icon-markdown-about.svg' />
+                    <img src='icon-markdown-about.svg' alt="icons" />
                     <span
                       onClick={() => handleContentClick("bio")}
                       style={{ cursor: "pointer" }}>
@@ -146,18 +148,19 @@ export default function About() {
                 onClick={() => setOpenInterests((o) => !o)}
                 style={{ cursor: "pointer" }}>
                 <img
+                alt="icons"
                   src='/icon-arrow-bio-grise-about.svg'
                   style={{
                     transform: openInterests ? "rotate(90deg)" : "rotate(0deg)",
                     transition: "transform 0.2s",
                   }}
                 />
-                <img src='/icon-interests-about.svg' /> interests
+                <img src='/icon-interests-about.svg' alt="icons" /> interests
               </p>
               {openInterests && (
                 <div className='content-section-about'>
                   <p>
-                    <img src='icon-markdown-about.svg' />
+                    <img src='icon-markdown-about.svg' alt="icons" />
                     <span
                       onClick={() => handleContentClick("interests")}
                       style={{ cursor: "pointer" }}>
@@ -171,18 +174,19 @@ export default function About() {
                 onClick={() => setOpenEducation((o) => !o)}
                 style={{ cursor: "pointer" }}>
                 <img
+                alt="icons"
                   src='/icon-arrow-bio-grise-about.svg'
                   style={{
                     transform: openEducation ? "rotate(90deg)" : "rotate(0deg)",
                     transition: "transform 0.2s",
                   }}
                 />
-                <img src='/icon-education-about.svg' /> education
+                <img src='/icon-education-about.svg' alt="icons" /> education
               </p>
               {openEducation && (
                 <div className='content-section-about'>
                   <p>
-                    <img src='icon-markdown-about.svg' />
+                    <img src='icon-markdown-about.svg' alt="icons"/>
                     <span
                       onClick={() => handleContentClick("education")}
                       style={{ cursor: "pointer" }}>
@@ -196,6 +200,7 @@ export default function About() {
               className={`contacts-persoInfo-about-1`}
               onClick={() => setOpenContacts((o) => !o)}>
               <img
+              alt="icons"
                 className='fleche-contact-about-1'
                 src='/icon-arrow-about-pleine.svg'
                 style={{
@@ -214,10 +219,10 @@ export default function About() {
                 transition: "opacity 0.2s",
               }}>
               <p>
-                <img src='/icon-mail-about.svg' /> samuelpouardpro@gmail.com
+                <img src='/icon-mail-about.svg' alt="icons" /> samuelpouardpro@gmail.com
               </p>
               <p>
-                <img src='/icon-phone-about.svg' /> +33 7 43 33 55 48
+                <img src='/icon-phone-about.svg' alt="icons" /> +33 7 43 33 55 48
               </p>
             </div>
           </div>
@@ -232,6 +237,7 @@ export default function About() {
               }}>
               <p>{displayedContent.title}</p>
               <img
+              alt="icons"
                 src='icon-close.svg'
                 onClick={() => handleContentClick("close")}
                 // style={{ cursor: "pointer" }}
@@ -251,7 +257,7 @@ export default function About() {
               ))}
             </div>
             <div className='texte-content-about-2'>
-              <h2>About me</h2>
+              <h1>About me</h1>
               <p>{displayedContent.content}</p>
             </div>
           </div>
@@ -271,7 +277,7 @@ export default function About() {
               <div>
                 <div className='container-main-content-code-about-3'>
                   <div className='container-code-texte-content-about-3'>
-                    <img src='avatar-1-about.svg' />
+                    <img src='avatar-1-about.svg' alt="icons" />
                     <div className='container-code-texte-username-all-content-about-3'>
                       <div className='container-code-texte-username-content-about-3'>
                         <h3>@username</h3>
@@ -280,11 +286,11 @@ export default function About() {
                       <div className='container-code-texte-details-content-about-3'>
                         <p>
                           {" "}
-                          <img src='Icon-comment-about.svg' /> details
+                          <img src='Icon-comment-about.svg' alt="icons" /> details
                         </p>
                         <p>
                           {" "}
-                          <img src='Stars-Icon-pleine-about.svg' /> 3 stars
+                          <img src='Stars-Icon-pleine-about.svg' alt="icons" /> 3 stars
                         </p>
                       </div>
                     </div>
@@ -300,7 +306,7 @@ export default function About() {
 
               <div className='container-main-content-code-about-3'>
                 <div className='container-code-texte-content-about-3'>
-                  <img src='avatar-2-about.svg' />
+                  <img src='avatar-2-about.svg' alt="icons" />
                   <div className='container-code-texte-username-all-content-about-3'>
                     <div className='container-code-texte-username-content-about-3'>
                       <h3>@username</h3>
@@ -309,11 +315,11 @@ export default function About() {
                     <div className='container-code-texte-details-content-about-3'>
                       <p>
                         {" "}
-                        <img src='Icon-comment-about.svg' /> details
+                        <img src='Icon-comment-about.svg' alt="icons" /> details
                       </p>
                       <p>
                         {" "}
-                        <img src='Stars-Icon-vide-about.svg' /> 3 stars
+                        <img src='Stars-Icon-vide-about.svg' alt="icons" /> 3 stars
                       </p>
                     </div>
                   </div>
