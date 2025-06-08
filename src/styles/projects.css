@@ -39,6 +39,7 @@ gap: var(--3, 8px);
 align-self: stretch;
 width: 100%;
 gap: 18px;
+margin-top: 15px;
 }
 
 .section-1-container-content-left p{

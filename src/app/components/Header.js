@@ -30,7 +30,9 @@ export default function Header() {
           </a>
         </div>
         <div className='header-contact-container'>
-          <a  href="/contact-me" className='header-nav-contact'>_Contact-me</a>
+          <a  href="/contact-me" className={`header-nav-projects${
+              pathname === "/contact-me" ? " active" : ""
+            }`}>_Contact-me</a>
         </div>
       </div>
     </header>
