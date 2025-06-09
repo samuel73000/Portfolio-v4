@@ -1,3 +1,9 @@
+.main-projects{
+  display: flex;
+  flex-direction: row;
+}
+
+
 .section-1-projects {
   width: 269px;
   height: 84.5vh;
@@ -67,3 +73,7 @@ margin-left: 12px;
 }
 
 /* !!!!!!!!!!!!!!!!!!section 2!!!!!!!!!!!!!!!!!!!!!! */
+.section-2-projects{
+  display: flex;
+  flex-direction: column;
+}

@@ -10,7 +10,7 @@ export default function Projects() {
   return (
     <section>
       <Header />
-      <main>
+      <main className="main-projects">
         <section className='section-1-projects'>
           <div className='section-1-container-all-left'>
             <div className='section-1-container-title-left'>
@@ -60,6 +60,13 @@ export default function Projects() {
         {/* !!!!!!!!!!!!!!!!!!!!section 2!!!!!!!!!! */}
 
         <section className='section-2-projects'>
+
+          <div className="section-2-header">
+          <p>React <img src="icon-close.svg"/></p>
+          </div>
+          <div className="section-2-content">
+
+          </div>
 
           
         </section>
