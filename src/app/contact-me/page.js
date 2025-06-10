@@ -47,7 +47,9 @@ export default function contactMe() {
         </section>
 
         <section className='section-2'>
-        <form name="contact" method="POST" data-netlify="true" >
+
+
+        <form name="contact" method="POST" netlify data-netlify="true">
   <p>
     <label>Your Name: <input type="text" name="name" /></label>
   </p>
@@ -61,6 +63,8 @@ export default function contactMe() {
     <button type="submit">Send</button>
   </p>
 </form>
+
+
         </section>
 
         <section className='section-3'></section>
