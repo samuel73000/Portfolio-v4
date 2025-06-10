@@ -46,26 +46,70 @@ export default function contactMe() {
           </div>
         </section>
 
+
+
+
+
+
+
+
+
         <section className='section-2'>
 
+        <form
+        name='contact'
+        method='POST'
+        data-netlify='true'
+        className={open ? "form-visible" : "form-hidden"}>
+        {/* Nécessaire pour le parsing du formulaire par Netlify */}
+        <input type='hidden' name='form-name' value='contact' />
 
-        <form name="contact" method="POST" netlify data-netlify="true">
-  <p>
-    <label>Your Name: <input type="text" name="name" /></label>
-  </p>
-  <p>
-    <label>Your Email: <input type="email" name="email" /></label>
-  </p>
-  <p>
-    <label>Message: <textarea name="message"></textarea></label>
-  </p>
-  <p>
-    <button type="submit">Send</button>
-  </p>
-</form>
+        <TextField
+          type='text'
+          label='Votre nom'
+          name='name'
+          fullWidth
+          margin='normal'
+        />
+
+        <TextField
+          label='Votre email'
+          name='email'
+          type='email'
+          fullWidth
+          margin='normal'
+        />
+
+        <TextField
+          type='text'
+          label='Votre message'
+          name='message'
+          multiline
+          rows={4}
+          fullWidth
+          margin='normal'
+        />
+
+        <Button
+          type='submit'
+          variant='outlined'
+          sx={{
+            marginTop: "1rem",
+
+            "&:hover": {
+              backgroundColor: "rgba(122, 70, 177, 0.1)",
+            },
+          }}>
+          Envoyer
+        </Button>
+      </form>
 
 
         </section>
+
+
+
+
 
         <section className='section-3'></section>
       </main>
