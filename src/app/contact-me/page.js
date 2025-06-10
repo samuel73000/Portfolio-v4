@@ -25,7 +25,7 @@ export default function contactMe() {
     });
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch("/api/submit-form", {
         method: "POST",
         body: formDataToSubmit,
       });
@@ -34,7 +34,8 @@ export default function contactMe() {
         alert("Message envoyé avec succès!");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        alert("Une erreur est survenue. Veuillez réessayer.");
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Une erreur est survenue");
       }
     } catch (error) {
       console.error("Error:", error);
