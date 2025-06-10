@@ -1,62 +1,132 @@
-.main-contact{
-    display: flex;
-    flex-direction: row;
+.main-contact {
+  display: flex;
+  flex-direction: row;
 }
 
-.section-1{
-    width: 270px;
-    height: 84.5vh;
-    min-width: 270px;
-    max-width: 270px;
-    overflow-x: hidden;
-    border-right: solid 1px #314158;
+.section-1 {
+  width: 270px;
+  height: 84.5vh;
+  min-width: 270px;
+  max-width: 270px;
+  overflow-x: hidden;
+  border-right: solid 1px #314158;
 }
-.section-1-container-titre{
-    display: flex;
-    padding: var(--4, 12px) var(--6, 24px);
-align-items: center;
-gap: 12px;
-align-self: stretch;
-border-bottom: solid 1px #314158;
+.section-1-container-titre {
+  display: flex;
+  padding: var(--4, 12px) var(--6, 24px);
+  align-items: center;
+  gap: 12px;
+  align-self: stretch;
+  border-bottom: solid 1px #314158;
 }
 .section-1-container-titre p {
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    display: flex;
-    color: var(--primitive-slate-50, #F8FAFC);
-font-family: var(--font-family-text, "Fira Code");
-font-size: var(--font-size-body-md, 16px);
-font-style: normal;
-font-weight: 450;
-line-height: var(--line-height-body-md, 24px); /* 150% */
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  color: var(--primitive-slate-50, #f8fafc);
+  font-family: var(--font-family-text, "Fira Code");
+  font-size: var(--font-size-body-md, 16px);
+  font-style: normal;
+  font-weight: 450;
+  line-height: var(--line-height-body-md, 24px); /* 150% */
 }
 .section-1-container-titre img {
-    margin-right: 5px;
+  margin-right: 5px;
 }
-.section-1-container-texte{
-    display: flex;
-    padding: var(--4, 12px);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--3, 8px);
-    align-self: stretch;
-    color: var(--theme-foreground, #90A1B9);
+.section-1-container-texte {
+  display: flex;
+  padding: var(--4, 12px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--3, 8px);
+  align-self: stretch;
+  color: var(--theme-foreground, #90a1b9);
 
-font-family: var(--font-family-text, "Fira Code");
-font-size: var(--font-size-body-md, 16px);
-font-style: normal;
-font-weight: 450;
-line-height: var(--line-height-body-md, 24px); /* 150% */
+  font-family: var(--font-family-text, "Fira Code");
+  font-size: var(--font-size-body-md, 16px);
+  font-style: normal;
+  font-weight: 450;
+  line-height: var(--line-height-body-md, 24px); /* 150% */
+}
+.section-1-container-texte img {
+  margin-right: 5px;
+}
+.section-1-container-texte p {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+}
+.heade-div {
+  border-bottom: solid 1px #314158;
+  width: 100%;
+  height: 48px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!section 2!!!!!!!!!!!!!!!!!!!!!!!!! */
 
+.section-2 {
+  width: 50%;
+  border-right: 1px solid var(--theme-theme-stroke, #314158);
+  padding: 130px var(--8, 40px) var(--8, 40px) var(--8, 40px);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+}
+
+/*!!!!!!!!!!!!!!!! section 3 !!!!!!!!!!!!!!!!! */
+
+.section-3 {
+  position: relative;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  padding: 130px var(--8, 40px) var(--8, 40px) var(--8, 40px);
+  align-items: flex-start;
+  gap: 40px;
+}
+.section-3-container-numero {
+  color: var(--theme-foreground, #90a1b9);
+  text-align: right;
+  font-family: var(--font-family-text, "Fira Code");
+  font-size: var(--font-size-body-lg, 18px);
+  font-style: normal;
+  font-weight: 450;
+  line-height: var(--line-height-body-lg, 27px);
+  padding-top: 0;
+}
+
+.section-3-container-main {
+  font-family: var(--font-family-text, "Fira Code");
+  font-size: var(--font-size-body-lg, 18px);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  padding-top: 0;
+}
+
+.section-3-container-right {
+  width: 5%;
+  height: 81vh;
+  border-left: 1px solid var(--theme-theme-stroke, #314158);
+  margin-top: -82px;
+  margin-right: -40px;
+  display: flex;
+  justify-content: center;
 
 }
-.section-1-container-texte img{
- margin-right: 5px;
+
+.section-3-container-right-content {
+  background: var(--primitive-slate-500, #62748e);
+  border-radius: 10px;
+  width: 60%;
+  height: 6px;
+  margin-top: 50%;
 }
-.section-1-container-texte p{
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    display: flex;
-   }

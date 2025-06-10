@@ -87,8 +87,10 @@ export default function contactMe() {
           </div>
         </section>
 
+        {/*!!!!!!!!!!!!!!!!!!!!!! section 2 !!!!!!!!!!!!!!!!!! */}
         <section className='section-2'>
-        <form
+          <div className='heade-div'></div>
+          <form
             name='contact'
             method='POST'
             data-netlify='true'
@@ -99,54 +101,69 @@ export default function contactMe() {
 
             <TextField
               type='text'
-              label='Votre nom'
+              label='_name'
               name='name'
               fullWidth
               margin='normal'
               sx={{
+                backgroundColor: "black",
                 "& .MuiOutlinedInput-root": {
-                  "& fieldset": { borderColor: "white" },
+                  "& fieldset": { borderColor: "#314158" },
                   "&:hover fieldset": { borderColor: "white" },
                   "&.Mui-focused fieldset": { borderColor: "white" },
                 },
-                "& .MuiInputLabel-root": { color: "white" },
-                "& .MuiInputBase-input": { color: "white" },
+                "& .MuiInputLabel-root": {
+                  color: " var(--primitive-slate-500, #62748E)",
+                },
+                "& .MuiInputBase-input": {
+                  color: " var(--primitive-slate-500, #62748E)",
+                },
               }}
             />
 
             <TextField
-              label='Votre email'
+              label='_email'
               name='email'
               type='email'
               fullWidth
               margin='normal'
               sx={{
+                backgroundColor: "black",
                 "& .MuiOutlinedInput-root": {
-                  "& fieldset": { borderColor: "white" },
+                  "& fieldset": { borderColor: "#314158" },
                   "&:hover fieldset": { borderColor: "white" },
                   "&.Mui-focused fieldset": { borderColor: "white" },
                 },
-                "& .MuiInputLabel-root": { color: "white" },
-                "& .MuiInputBase-input": { color: "white" },
+                "& .MuiInputLabel-root": {
+                  color: " var(--primitive-slate-500, #62748E)",
+                },
+                "& .MuiInputBase-input": {
+                  color: " var(--primitive-slate-500, #62748E)",
+                },
               }}
             />
 
             <TextField
               type='text'
-              label='Votre message'
+              label='_message'
               name='message'
               multiline
               rows={4}
               fullWidth
               margin='normal'
               sx={{
+                backgroundColor: "black",
                 "& .MuiOutlinedInput-root": {
-                  "& fieldset": { borderColor: "white" },
+                  "& fieldset": { borderColor: "#314158" },
                   "&:hover fieldset": { borderColor: "white" },
                   "&.Mui-focused fieldset": { borderColor: "white" },
                 },
-                "& .MuiInputLabel-root": { color: "white" },
-                "& .MuiInputBase-input": { color: "white" },
+                "& .MuiInputLabel-root": {
+                  color: " var(--primitive-slate-500, #62748E)",
+                },
+                "& .MuiInputBase-input": {
+                  color: " var(--primitive-slate-500, #62748E)",
+                },
               }}
             />
 
@@ -155,19 +172,50 @@ export default function contactMe() {
               variant='outlined'
               sx={{
                 marginTop: "1rem",
-                borderColor: "#7a46b1",
-                color: "#fff",
+                borderColor: "#314158",
+                padding:
+                  "var(--button-top-bottom, 10px) var(--button-left-right, 12px)",
+                color: " var(--primitive-slate-500, #62748E)",
+
                 "&:hover": {
-                  borderColor: "#9857d3",
+                  borderColor: "#314158",
                   backgroundColor: "rgba(122, 70, 177, 0.1)",
                 },
               }}>
-              Envoyer
+              submit-message
             </Button>
           </form>
         </section>
+        {/* !!!!!!!!!!!!!!!!!!!section 3 !!!!!!!!!!!!!!!!!!!!!! */}
+        <section className='section-3'>
+        <div className='heade-div'></div>
+          <div className='section-3-container-numero'>
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+            <p>4</p>
+            <p>5</p>
+            <p>6</p>
+            <p>7</p>
+            <p>8</p>
+            <p>9</p>
+            <p>10</p>
+            <p>11</p>
+            <p>12</p>
+          </div>
+          <div className='section-3-container-main'>
+            <p>const button = document.querySelector('#sendBtn');</p>
+            <p>
+              const message = name: "Jonathan Davis", email: "", message: "",
+              date: "Thu 21 Apr"
+            </p>
+            <p>button.addEventListener'click', form.send(message);</p>
+          </div>
 
-        <section className='section-3'></section>
+          <div className='section-3-container-right'>
+            <div className='section-3-container-right-content'></div>
+          </div>
+        </section>
       </main>
       <Footer />
     </section>
