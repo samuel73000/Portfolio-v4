@@ -8,6 +8,7 @@ import TextField from "@mui/material/TextField";
 
 export default function contactMe() {
   const [openContacts, setOpenContacts] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <section>
@@ -46,23 +47,58 @@ export default function contactMe() {
           </div>
         </section>
 
-
-
-
-
-
-
-
-
         <section className='section-2'>
- 
- 
+          <form
+            name='contact'
+            method='POST'
+            data-netlify='true'
+            netlify-honeypot='bot-field'
+            className={open ? "form-visible" : "form-hidden"}>
+            <input type='hidden' name='form-name' value='contact' />
+            <input type='hidden' name='bot-field' />
 
+            <TextField
+              type='text'
+              label='Votre nom'
+              name='name'
+              fullWidth
+              margin='normal'
+              required
+            />
+
+            <TextField
+              label='Votre email'
+              name='email'
+              type='email'
+              fullWidth
+              margin='normal'
+              required
+            />
+
+            <TextField
+              type='text'
+              label='Votre message'
+              name='message'
+              multiline
+              rows={4}
+              fullWidth
+              margin='normal'
+              required
+            />
+
+            <Button
+              type='submit'
+              variant='outlined'
+              sx={{
+                marginTop: "1rem",
+                "&:hover": {
+                  backgroundColor: "rgba(122, 70, 177, 0.1)",
+                },
+              }}>
+              Envoyer
+            </Button>
+          </form>
         </section>
-
-
-
-
 
         <section className='section-3'></section>
       </main>
