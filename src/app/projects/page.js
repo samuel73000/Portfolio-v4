@@ -10,7 +10,7 @@ export default function Projects() {
   return (
     <section>
       <Header />
-      <main className="main-projects">
+      <main className='main-projects'>
         <section className='section-1-projects'>
           <div className='section-1-container-all-left'>
             <div className='section-1-container-title-left'>
@@ -60,15 +60,98 @@ export default function Projects() {
         {/* !!!!!!!!!!!!!!!!!!!!section 2!!!!!!!!!! */}
 
         <section className='section-2-projects'>
-
-          <div className="section-2-header">
-          <p>React <img src="icon-close.svg"/></p>
-          </div>
-          <div className="section-2-contentt">
-
+          <div className='section-2-header'>
+            <p>
+              React <img src='icon-close.svg' />
+            </p>
           </div>
 
-          
+          <div className='section-2-content-all'>
+            <div className='section-2-content'>
+              <div className='section-2-content-titre'>
+                <p>
+                  {" "}
+                  <span>Project 1</span> // _iu-animation
+                </p>
+              </div>
+              <div className='section-2-content-main'>
+                <div className='section-2-img-tech'>
+                  <img src='icon-react-2.svg' />
+                </div>
+                <img className='section-2-img-projects' src='project-1.svg' />
+                <p>Duis aute irure dolor in velit esse cillum dolore.</p>
+                <button>view-project</button>
+              </div>
+            </div>
+
+            <div className='section-2-content'>
+              <div className='section-2-content-titre'>
+                <p>
+                  {" "}
+                  <span>Project 2</span> // _tetris-game
+                </p>
+              </div>
+              <div className='section-2-content-main'>
+                <div className='section-2-img-tech'>
+                  <img src='icon-react-2.svg' />
+                </div>
+                <img className='section-2-img-projects' src='project-2.svg' />
+                <p>Duis aute irure dolor in velit esse cillum dolore.</p>
+                <button>view-project</button>
+              </div>
+            </div>
+
+            <div className='section-2-content'>
+              <div className='section-2-content-titre'>
+                <p>
+                  {" "}
+                  <span>Project 3</span> // _glassy-ui
+                </p>
+              </div>
+              <div className='section-2-content-main'>
+                <div className='section-2-img-tech'>
+                  <img src='icon-css-2.svg' />
+                </div>
+                <img className='section-2-img-projects' src='project-3.svg' />
+                <p>Duis aute irure dolor in velit esse cillum dolore.</p>
+                <button>view-project</button>
+              </div>
+            </div>
+
+            <div className='section-2-content'>
+              <div className='section-2-content-titre'>
+                <p>
+                  {" "}
+                  <span>Project 4</span> // _nimbus
+                </p>
+              </div>
+              <div className='section-2-content-main'>
+                <div className='section-2-img-tech'>
+                  <img src='icon-vue-2.svg' />
+                </div>
+                <img className='section-2-img-projects' src='project-4.svg' />
+                <p>Duis aute irure dolor in velit esse cillum dolore.</p>
+                <button>view-project</button>
+              </div>
+            </div>
+
+            <div className='section-2-content'>
+              <div className='section-2-content-titre'>
+                <p>
+                  {" "}
+                  <span>Project 5</span> // _emberize-ui
+                </p>
+              </div>
+              <div className='section-2-content-main'>
+                <div className='section-2-img-tech'>
+                  <img src='icon-vue-2.svg' />
+                </div>
+                <img className='section-2-img-projects' src='project-5.svg' />
+                <p>Duis aute irure dolor in velit esse cillum dolore.</p>
+                <button>view-project</button>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
       <Footer />
