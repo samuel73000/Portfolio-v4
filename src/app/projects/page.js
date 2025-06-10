@@ -64,7 +64,7 @@ export default function Projects() {
           <div className="section-2-header">
           <p>React <img src="icon-close.svg"/></p>
           </div>
-          <div className="section-2-content">
+          <div className="section-2-contentt">
 
           </div>
 
