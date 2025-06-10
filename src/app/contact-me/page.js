@@ -55,55 +55,53 @@ export default function contactMe() {
 
 
         <section className='section-2'>
-
+ 
         <form
-        name='contact'
-        method='POST'
-        data-netlify='true'
-        className={open ? "form-visible" : "form-hidden"}>
-        {/* Nécessaire pour le parsing du formulaire par Netlify */}
-        <input type='hidden' name='form-name' value='contact' />
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  className={open ? "form-visible" : "form-hidden"}
+>
+  {/* Nécessaire pour le parsing du formulaire par Netlify */}
+  <input type="hidden" name="form-name" value="contact" />
 
-        <TextField
-          type='text'
-          label='Votre nom'
-          name='name'
-          fullWidth
-          margin='normal'
-        />
+  <div className="form-group">
+    <label htmlFor="name">Votre nom</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      required
+      className="form-control"
+    />
+  </div>
 
-        <TextField
-          label='Votre email'
-          name='email'
-          type='email'
-          fullWidth
-          margin='normal'
-        />
+  <div className="form-group">
+    <label htmlFor="email">Votre email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      required
+      className="form-control"
+    />
+  </div>
 
-        <TextField
-          type='text'
-          label='Votre message'
-          name='message'
-          multiline
-          rows={4}
-          fullWidth
-          margin='normal'
-        />
+  <div className="form-group">
+    <label htmlFor="message">Votre message</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="4"
+      required
+      className="form-control"
+    ></textarea>
+  </div>
 
-        <Button
-          type='submit'
-          variant='outlined'
-          sx={{
-            marginTop: "1rem",
-
-            "&:hover": {
-              backgroundColor: "rgba(122, 70, 177, 0.1)",
-            },
-          }}>
-          Envoyer
-        </Button>
-      </form>
-
+  <button type="submit" className="submit-button">
+    Envoyer
+  </button>
+</form>
 
         </section>
 
