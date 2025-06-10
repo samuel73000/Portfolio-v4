@@ -47,78 +47,20 @@ export default function contactMe() {
         </section>
 
         <section className='section-2'>
-          <form name='contact' method='POST' data-netlify='true' netlify='true'>
-            {/* Nécessaire pour le parsing du formulaire par Netlify */}
-            <input type='hidden' name='form-name' value='contact' />
-
-            <TextField
-              type='text'
-              label='Votre nom'
-              name='name'
-              fullWidth
-              margin='normal'
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": { borderColor: "white" },
-                  "&:hover fieldset": { borderColor: "white" },
-                  "&.Mui-focused fieldset": { borderColor: "white" },
-                },
-                "& .MuiInputLabel-root": { color: "white" },
-                "& .MuiInputBase-input": { color: "white" },
-              }}
-            />
-
-            <TextField
-              label='Votre email'
-              name='email'
-              type='email'
-              fullWidth
-              margin='normal'
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": { borderColor: "white" },
-                  "&:hover fieldset": { borderColor: "white" },
-                  "&.Mui-focused fieldset": { borderColor: "white" },
-                },
-                "& .MuiInputLabel-root": { color: "white" },
-                "& .MuiInputBase-input": { color: "white" },
-              }}
-            />
-
-            <TextField
-              type='text'
-              label='Votre message'
-              name='message'
-              multiline
-              rows={4}
-              fullWidth
-              margin='normal'
-              sx={{
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": { borderColor: "white" },
-                  "&:hover fieldset": { borderColor: "white" },
-                  "&.Mui-focused fieldset": { borderColor: "white" },
-                },
-                "& .MuiInputLabel-root": { color: "white" },
-                "& .MuiInputBase-input": { color: "white" },
-              }}
-            />
-
-            <Button
-              type='submit'
-              variant='outlined'
-              sx={{
-                marginTop: "1rem",
-                borderColor: "#7a46b1",
-                color: "#fff",
-                "&:hover": {
-                  borderColor: "#9857d3",
-                  backgroundColor: "rgba(122, 70, 177, 0.1)",
-                },
-              }}>
-              Envoyer
-            </Button>
-          </form>
+        <form name="contact" method="POST" data-netlify="true" >
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
         </section>
 
         <section className='section-3'></section>
