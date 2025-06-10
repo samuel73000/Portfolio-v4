@@ -56,52 +56,7 @@ export default function contactMe() {
 
         <section className='section-2'>
  
-        <form
-  name="contact"
-  method="POST"
-  data-netlify="true"
-  className={open ? "form-visible" : "form-hidden"}
->
-  {/* Nécessaire pour le parsing du formulaire par Netlify */}
-  <input type="hidden" name="form-name" value="contact" />
-
-  <div className="form-group">
-    <label htmlFor="name">Votre nom</label>
-    <input
-      type="text"
-      id="name"
-      name="name"
-      required
-      className="form-control"
-    />
-  </div>
-
-  <div className="form-group">
-    <label htmlFor="email">Votre email</label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      required
-      className="form-control"
-    />
-  </div>
-
-  <div className="form-group">
-    <label htmlFor="message">Votre message</label>
-    <textarea
-      id="message"
-      name="message"
-      rows="4"
-      required
-      className="form-control"
-    ></textarea>
-  </div>
-
-  <button type="submit" className="submit-button">
-    Envoyer
-  </button>
-</form>
+ 
 
         </section>
 
