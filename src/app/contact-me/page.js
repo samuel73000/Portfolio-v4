@@ -88,49 +88,66 @@ export default function contactMe() {
         </section>
 
         <section className='section-2'>
-          <form
+        <form
             name='contact'
             method='POST'
             data-netlify='true'
-            netlify-honeypot='bot-field'
-            onSubmit={handleSubmit}
+            netlify
             className={open ? "form-visible" : "form-hidden"}>
+            {/* Nécessaire pour le parsing du formulaire par Netlify */}
             <input type='hidden' name='form-name' value='contact' />
-            <input type='hidden' name='bot-field' />
 
             <TextField
               type='text'
               label='Votre nom'
               name='name'
-              value={formData.name}
-              onChange={handleChange}
               fullWidth
               margin='normal'
-              required
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { borderColor: "white" },
+                  "&:hover fieldset": { borderColor: "white" },
+                  "&.Mui-focused fieldset": { borderColor: "white" },
+                },
+                "& .MuiInputLabel-root": { color: "white" },
+                "& .MuiInputBase-input": { color: "white" },
+              }}
             />
 
             <TextField
               label='Votre email'
               name='email'
               type='email'
-              value={formData.email}
-              onChange={handleChange}
               fullWidth
               margin='normal'
-              required
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { borderColor: "white" },
+                  "&:hover fieldset": { borderColor: "white" },
+                  "&.Mui-focused fieldset": { borderColor: "white" },
+                },
+                "& .MuiInputLabel-root": { color: "white" },
+                "& .MuiInputBase-input": { color: "white" },
+              }}
             />
 
             <TextField
               type='text'
               label='Votre message'
               name='message'
-              value={formData.message}
-              onChange={handleChange}
               multiline
               rows={4}
               fullWidth
               margin='normal'
-              required
+              sx={{
+                "& .MuiOutlinedInput-root": {
+                  "& fieldset": { borderColor: "white" },
+                  "&:hover fieldset": { borderColor: "white" },
+                  "&.Mui-focused fieldset": { borderColor: "white" },
+                },
+                "& .MuiInputLabel-root": { color: "white" },
+                "& .MuiInputBase-input": { color: "white" },
+              }}
             />
 
             <Button
@@ -138,7 +155,10 @@ export default function contactMe() {
               variant='outlined'
               sx={{
                 marginTop: "1rem",
+                borderColor: "#7a46b1",
+                color: "#fff",
                 "&:hover": {
+                  borderColor: "#9857d3",
                   backgroundColor: "rgba(122, 70, 177, 0.1)",
                 },
               }}>
