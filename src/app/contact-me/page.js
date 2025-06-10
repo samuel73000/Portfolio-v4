@@ -44,17 +44,10 @@ export default function contactMe() {
               <img src='icon-phone-about.svg' /> +33 7 43 33 55 48
             </p>
           </div>
-
         </section>
 
-
         <section className='section-2'>
-        <form
-            name='contact'
-            method='POST'
-            data-netlify='true'
-            netlify
-        >
+          <form name='contact' method='POST' data-netlify='true' netlify='true'>
             {/* Nécessaire pour le parsing du formulaire par Netlify */}
             <input type='hidden' name='form-name' value='contact' />
 
@@ -126,14 +119,9 @@ export default function contactMe() {
               Envoyer
             </Button>
           </form>
-
-
         </section>
 
-
-
-
-        <section className="section-3"></section>
+        <section className='section-3'></section>
       </main>
       <Footer />
     </section>
