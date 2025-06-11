@@ -103,6 +103,8 @@ export default function contactMe() {
               type='text'
               label='_name'
               name='name'
+              value={formData.name}
+              onChange={handleChange}
               fullWidth
               margin='normal'
               sx={{
@@ -125,6 +127,8 @@ export default function contactMe() {
               label='_email'
               name='email'
               type='email'
+              value={formData.email}
+              onChange={handleChange}
               fullWidth
               margin='normal'
               sx={{
@@ -147,6 +151,8 @@ export default function contactMe() {
               type='text'
               label='_message'
               name='message'
+              value={formData.message}
+              onChange={handleChange}
               multiline
               rows={4}
               fullWidth
@@ -188,7 +194,7 @@ export default function contactMe() {
         </section>
         {/* !!!!!!!!!!!!!!!!!!!section 3 !!!!!!!!!!!!!!!!!!!!!! */}
         <section className='section-3'>
-        <div className='heade-div'></div>
+          <div className='heade-div'></div>
           <div className='section-3-container-numero'>
             <p>1</p>
             <p>2</p>
@@ -204,12 +210,30 @@ export default function contactMe() {
             <p>12</p>
           </div>
           <div className='section-3-container-main'>
-            <p>const button = document.querySelector('#sendBtn');</p>
             <p>
-              const message = name: "Jonathan Davis", email: "", message: "",
-              date: "Thu 21 Apr"
+              <span className='keyword'>const</span>{" "}
+              <span className='variable'>button</span> = document.querySelector(
+              <span className='string'>'#sendBtn'</span>);
             </p>
-            <p>button.addEventListener'click', form.send(message);</p>
+            <p>
+              <span className='keyword'>const</span>{" "}
+              <span className='variable'>message</span> = {"{"}
+              <span className='variable'>name</span>:{" "}
+              <span className='string'>"{formData.name}"</span>,
+              <span className='variable'>email</span>:{" "}
+              <span className='string'>"{formData.email}"</span>,
+              <span className='variable'>message</span>:{" "}
+              <span className='string'>"{formData.message}"</span>,
+              <span className='variable'>date</span>:{" "}
+              <span className='string'>"Thu 21 Apr"</span>
+              {"}"}
+            </p>
+            <p>
+              <span className='variable'>button</span>.
+              <span className='function'>addEventListener</span>(
+              <span className='string'>'click'</span>, () ={">"}{" "}
+              form.send(message));
+            </p>
           </div>
 
           <div className='section-3-container-right'>
