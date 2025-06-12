@@ -25,17 +25,17 @@ export default function contactMe() {
     });
 
     try {
-      const response = await fetch("/api/submit-form", {
+      const response = await fetch("/", {
         method: "POST",
-        body: formDataToSubmit,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formDataToSubmit).toString(),
       });
 
       if (response.ok) {
         alert("Message envoyé avec succès!");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "Une erreur est survenue");
+        throw new Error("Une erreur est survenue");
       }
     } catch (error) {
       console.error("Error:", error);
@@ -95,6 +95,7 @@ export default function contactMe() {
             method='POST'
             data-netlify='true'
             netlify
+            onSubmit={handleSubmit}
             className={open ? "form-visible" : "form-hidden"}>
             {/* Nécessaire pour le parsing du formulaire par Netlify */}
             <input type='hidden' name='form-name' value='contact' />
