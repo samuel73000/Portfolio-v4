@@ -90,6 +90,7 @@
   padding: 130px var(--8, 40px) var(--8, 40px) var(--8, 40px);
   align-items: flex-start;
   gap: 40px;
+  overflow: hidden;
 }
 .section-3-container-numero {
   color: var(--theme-foreground, #90a1b9);
@@ -110,16 +111,29 @@
   font-weight: 450;
   line-height: var(--line-height-body-md, 24px);
   padding: var(--4, 12px);
-  border: 1px solid #314158;
   border-top: none;
   border-left: none;
   border-right: none;
   width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-shrink: 1;
 }
 
 .section-3-container-main p {
   margin: 0;
   padding: 4px 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
 }
 
 .section-3-container-main .variable {
@@ -139,7 +153,7 @@
 }
 
 .section-3-container-right {
-  width: 5%;
+  width: 40px;
   height: 81vh;
   border-left: 1px solid var(--theme-theme-stroke, #314158);
   margin-top: -82px;

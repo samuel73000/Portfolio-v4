@@ -196,18 +196,9 @@ export default function contactMe() {
         <section className='section-3'>
           <div className='heade-div'></div>
           <div className='section-3-container-numero'>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p>6</p>
-            <p>7</p>
-            <p>8</p>
-            <p>9</p>
-            <p>10</p>
-            <p>11</p>
-            <p>12</p>
+            {[...Array(12)].map((_, index) => (
+              <p key={index}>{index + 1}</p>
+            ))}
           </div>
           <div className='section-3-container-main'>
             <p>
