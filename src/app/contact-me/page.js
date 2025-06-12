@@ -9,6 +9,7 @@ import TextField from "@mui/material/TextField";
 export default function contactMe() {
   const [openContacts, setOpenContacts] = useState(false);
   const [open, setOpen] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,7 +33,7 @@ export default function contactMe() {
       });
 
       if (response.ok) {
-        alert("Message envoyé avec succès!");
+        setIsSubmitted(true);
         setFormData({ name: "", email: "", message: "" });
       } else {
         throw new Error("Une erreur est survenue");
@@ -41,6 +42,11 @@ export default function contactMe() {
       console.error("Error:", error);
       alert("Une erreur est survenue. Veuillez réessayer.");
     }
+  };
+
+  const handleNewMessage = () => {
+    setIsSubmitted(false);
+    setOpen(true);
   };
 
   const handleChange = (e) => {
@@ -90,108 +96,155 @@ export default function contactMe() {
         {/*!!!!!!!!!!!!!!!!!!!!!! section 2 !!!!!!!!!!!!!!!!!! */}
         <section className='section-2'>
           <div className='heade-div'></div>
-          <form
-            name='contact'
-            method='POST'
-            data-netlify='true'
-            netlify
-            onSubmit={handleSubmit}
-            className={open ? "form-visible" : "form-hidden"}>
-            {/* Nécessaire pour le parsing du formulaire par Netlify */}
-            <input type='hidden' name='form-name' value='contact' />
+          {!isSubmitted ? (
+            <form
+              name='contact'
+              method='POST'
+              data-netlify='true'
+              netlify
+              onSubmit={handleSubmit}
+              className={open ? "form-visible" : "form-hidden"}>
+              {/* Nécessaire pour le parsing du formulaire par Netlify */}
+              <input type='hidden' name='form-name' value='contact' />
 
-            <TextField
-              type='text'
-              label='_name'
-              name='name'
-              value={formData.name}
-              onChange={handleChange}
-              fullWidth
-              margin='normal'
-              sx={{
-                backgroundColor: "black",
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": { borderColor: "#314158" },
-                  "&:hover fieldset": { borderColor: "white" },
-                  "&.Mui-focused fieldset": { borderColor: "white" },
-                },
-                "& .MuiInputLabel-root": {
-                  color: " var(--primitive-slate-500, #62748E)",
-                },
-                "& .MuiInputBase-input": {
-                  color: " var(--primitive-slate-500, #62748E)",
-                },
-              }}
-            />
+              <TextField
+                type='text'
+                label='_name'
+                name='name'
+                value={formData.name}
+                onChange={handleChange}
+                fullWidth
+                margin='normal'
+                sx={{
+                  backgroundColor: "black",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": { borderColor: "#314158" },
+                    "&:hover fieldset": { borderColor: "white" },
+                    "&.Mui-focused fieldset": { borderColor: "white" },
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: " var(--primitive-slate-500, #62748E)",
+                  },
+                  "& .MuiInputBase-input": {
+                    color: " var(--primitive-slate-500, #62748E)",
+                  },
+                }}
+              />
 
-            <TextField
-              label='_email'
-              name='email'
-              type='email'
-              value={formData.email}
-              onChange={handleChange}
-              fullWidth
-              margin='normal'
-              sx={{
-                backgroundColor: "black",
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": { borderColor: "#314158" },
-                  "&:hover fieldset": { borderColor: "white" },
-                  "&.Mui-focused fieldset": { borderColor: "white" },
-                },
-                "& .MuiInputLabel-root": {
-                  color: " var(--primitive-slate-500, #62748E)",
-                },
-                "& .MuiInputBase-input": {
-                  color: " var(--primitive-slate-500, #62748E)",
-                },
-              }}
-            />
+              <TextField
+                label='_email'
+                name='email'
+                type='email'
+                value={formData.email}
+                onChange={handleChange}
+                fullWidth
+                margin='normal'
+                sx={{
+                  backgroundColor: "black",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": { borderColor: "#314158" },
+                    "&:hover fieldset": { borderColor: "white" },
+                    "&.Mui-focused fieldset": { borderColor: "white" },
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: " var(--primitive-slate-500, #62748E)",
+                  },
+                  "& .MuiInputBase-input": {
+                    color: " var(--primitive-slate-500, #62748E)",
+                  },
+                }}
+              />
 
-            <TextField
-              type='text'
-              label='_message'
-              name='message'
-              value={formData.message}
-              onChange={handleChange}
-              multiline
-              rows={4}
-              fullWidth
-              margin='normal'
-              sx={{
-                backgroundColor: "black",
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": { borderColor: "#314158" },
-                  "&:hover fieldset": { borderColor: "white" },
-                  "&.Mui-focused fieldset": { borderColor: "white" },
-                },
-                "& .MuiInputLabel-root": {
-                  color: " var(--primitive-slate-500, #62748E)",
-                },
-                "& .MuiInputBase-input": {
-                  color: " var(--primitive-slate-500, #62748E)",
-                },
-              }}
-            />
+              <TextField
+                type='text'
+                label='_message'
+                name='message'
+                value={formData.message}
+                onChange={handleChange}
+                multiline
+                rows={4}
+                fullWidth
+                margin='normal'
+                sx={{
+                  backgroundColor: "black",
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": { borderColor: "#314158" },
+                    "&:hover fieldset": { borderColor: "white" },
+                    "&.Mui-focused fieldset": { borderColor: "white" },
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: " var(--primitive-slate-500, #62748E)",
+                  },
+                  "& .MuiInputBase-input": {
+                    color: " var(--primitive-slate-500, #62748E)",
+                  },
+                }}
+              />
 
-            <Button
-              type='submit'
-              variant='outlined'
-              sx={{
-                marginTop: "1rem",
-                borderColor: "#314158",
-                padding:
-                  "var(--button-top-bottom, 10px) var(--button-left-right, 12px)",
-                color: " var(--primitive-slate-500, #62748E)",
-
-                "&:hover": {
+              <Button
+                type='submit'
+                variant='outlined'
+                sx={{
+                  marginTop: "1rem",
                   borderColor: "#314158",
-                  backgroundColor: "rgba(122, 70, 177, 0.1)",
-                },
+                  padding:
+                    "var(--button-top-bottom, 10px) var(--button-left-right, 12px)",
+                  color: " var(--primitive-slate-500, #62748E)",
+
+                  "&:hover": {
+                    borderColor: "#314158",
+                    backgroundColor: "rgba(122, 70, 177, 0.1)",
+                  },
+                }}>
+                submit-message
+              </Button>
+            </form>
+          ) : (
+            <div
+              className='success-message'
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                gap: "20px",
+                padding: "40px",
               }}>
-              submit-message
-            </Button>
-          </form>
+              <h2
+                style={{
+                  color: "var(--primitive-slate-50, #f8fafc)",
+                  fontFamily: 'var(--font-family-text, "Fira Code")',
+                  fontSize: "var(--font-size-heading-h4, 30px)",
+                  fontWeight: "450",
+                }}>
+                Message envoyé ! 🤘
+              </h2>
+              <p
+                style={{
+                  color: "var(--theme-foreground, #90a1b9)",
+                  fontFamily: 'var(--font-family-text, "Fira Code")',
+                  fontSize: "var(--font-size-body-md, 16px)",
+                  textAlign: "center",
+                }}>
+                Merci pour votre message. Je vous répondrai dans les plus brefs
+                délais.
+              </p>
+              <Button
+                onClick={handleNewMessage}
+                variant='outlined'
+                sx={{
+                  borderColor: "#314158",
+                  padding:
+                    "var(--button-top-bottom, 10px) var(--button-left-right, 12px)",
+                  color: " var(--primitive-slate-500, #62748E)",
+                  "&:hover": {
+                    borderColor: "#314158",
+                    backgroundColor: "rgba(122, 70, 177, 0.1)",
+                  },
+                }}>
+                send-new-message
+              </Button>
+            </div>
+          )}
         </section>
         {/* !!!!!!!!!!!!!!!!!!!section 3 !!!!!!!!!!!!!!!!!!!!!! */}
         <section className='section-3'>
