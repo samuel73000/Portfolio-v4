@@ -263,3 +263,96 @@
   margin-top: 200px;
   margin-left: 5vw;
 }
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!! responsive!!!!!!!!!!!!!!!!!! */
+
+@media (max-width: 1024px) {
+   .effet-green-home,
+  .effet-bleu-home {
+    top: 8%;
+    left: 20%;
+  }
+  .effet-bleu-home {
+    top: 10%;
+    left: 0%;
+  }
+  
+  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!texte et titre!!!!!!!!!!!!!!!!!!!! */
+  .container-home-all {
+    height:600px;
+  }
+  .container-home-text {
+    width: 80%;
+    height: 90%;
+    gap: 55px;
+  }
+  .container-home-text-content-1-text-1 {
+    font-size: var(--font-size-body-lg, 16px);
+  }
+  
+  .container-home-text-content-1-text-2 {
+    font-size: var(--font-size-heading-h1, 45px);
+  }
+  
+  .container-home-text-content-1-text-3 {
+    font-size: var(--font-size-heading-h4, 16px);
+    width:80vw;
+  }
+  
+  .container-home-text-content-2-text-1 {
+    font-size: var(--font-size-body-md, 15px);
+    width: 80vw;
+  }
+  .container-home-text-content-2-text-2 {
+    font-size: var(--font-size-body-md, 16px);
+  }
+  .span-home-2 {
+    font-size: var(--font-size-body-md, 16px);
+  }
+  .span-home-3 {
+    font-size: var(--font-size-body-md, 16px);
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .container-home-game {
+    display: none;
+  }
+
+
+
+
+
+
+}

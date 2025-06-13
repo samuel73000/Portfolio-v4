@@ -19,7 +19,7 @@ export default function Header() {
             className={`header-nav-about-me${
               pathname === "/about-me" ? " active" : ""
             }`}>
-              _À_propos_de_moi
+            _À_propos_de_moi
           </a>
           <a
             href='/projects'
@@ -30,9 +30,13 @@ export default function Header() {
           </a>
         </div>
         <div className='header-contact-container'>
-          <a  href="/contact-me" className={`header-nav-projects${
+          <a
+            href='/contact-me'
+            className={`header-nav-projects${
               pathname === "/contact-me" ? " active" : ""
-            }`}>_Me_Contacter </a>
+            }`}>
+            _Me_Contacter{" "}
+          </a>
         </div>
       </div>
     </header>

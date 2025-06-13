@@ -43,3 +43,10 @@ a {
   flex-direction: column;
   border: 1px solid var(--theme-theme-stroke, #314158);
 }
+
+
+@media (max-width: 1024px) {
+  .main-container {
+    margin: 10px auto; 
+  }
+}
