@@ -196,7 +196,7 @@ export default function contactMe() {
                     backgroundColor: "rgba(122, 70, 177, 0.1)",
                   },
                 }}>
-                submit-message
+                Envoyer-le-message
               </Button>
             </form>
           ) : (
@@ -241,7 +241,7 @@ export default function contactMe() {
                     backgroundColor: "rgba(122, 70, 177, 0.1)",
                   },
                 }}>
-                send-new-message
+                Envoyer-un-nouveau-message
               </Button>
             </div>
           )}

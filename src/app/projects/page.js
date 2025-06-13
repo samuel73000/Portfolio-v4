@@ -2,85 +2,34 @@
 import styles from "../../styles/projects.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { useState } from "react";
 
 export default function Projects() {
-  const [openProjects, setOpenProjects] = useState(false);
-
   return (
     <section>
       <Header />
       <main className='main-projects'>
-        <section className='section-1-projects'>
-          <div className='section-1-container-all-left'>
-            <div className='section-1-container-title-left'>
-              <p onClick={() => setOpenProjects((o) => !o)}>
-                <img
-                  src='icon-arrow-about-pleine.svg'
-                  style={{
-                    transform: openProjects ? "rotate(0deg)" : "rotate(270deg)",
-                    transition: "transform 0.2s",
-                  }}
-                />
-                projects
-              </p>
-            </div>
-            <div
-              className='section-1-container-content-left'
-              style={{
-                display: openProjects ? "flex" : "none",
-                flexDirection: "column",
-                gap: "10px",
-                paddingTop: openProjects ? "4px" : "0",
-                paddingBottom: openProjects ? "12px" : "0",
-              }}>
-              <p>
-                {" "}
-                <input type='checkbox' /> <img src='icon-react.svg' /> React
-              </p>
-              <p>
-                {" "}
-                <input type='checkbox' /> <img src='icon-html.svg' /> HTML
-              </p>
-              <p>
-                {" "}
-                <input type='checkbox' /> <img src='icon-css.svg' /> CSS
-              </p>
-              <p>
-                {" "}
-                <input type='checkbox' /> <img src='icon-vue.svg' /> Vue
-              </p>
-              <p>
-                {" "}
-                <input type='checkbox' /> <img src='icon-angular.svg' /> Angular
-              </p>
-            </div>
-          </div>
-        </section>
-        {/* !!!!!!!!!!!!!!!!!!!!section 2!!!!!!!!!! */}
-
         <section className='section-2-projects'>
-          <div className='section-2-header'>
-            <p>
-              React <img src='icon-close.svg' />
-            </p>
-          </div>
-
           <div className='section-2-content-all'>
             <div className='section-2-content'>
               <div className='section-2-content-titre'>
                 <p>
                   {" "}
-                  <span>Project 1</span> // _iu-animation
+                  <span>Project 1</span> // _Kasa
                 </p>
               </div>
               <div className='section-2-content-main'>
                 <div className='section-2-img-tech'>
                   <img src='icon-react-2.svg' />
                 </div>
-                <img className='section-2-img-projects' src='project-1.svg' />
-                <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-                <button>view-project</button>
+                <img className='section-2-img-projects' src='kasa.svg' />
+                <p>
+                  Plateforme de réservation de logements réalisée avec React,
+                  Redux et Ts.
+                </p>
+                <a href='https://kasa-4.netlify.app/'>
+                  {" "}
+                  <button>voir_projet</button>
+                </a>
               </div>
             </div>
 
@@ -88,16 +37,22 @@ export default function Projects() {
               <div className='section-2-content-titre'>
                 <p>
                   {" "}
-                  <span>Project 2</span> // _tetris-game
+                  <span>Project 2</span> // _Print-it
                 </p>
               </div>
               <div className='section-2-content-main'>
                 <div className='section-2-img-tech'>
                   <img src='icon-react-2.svg' />
                 </div>
-                <img className='section-2-img-projects' src='project-2.svg' />
-                <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-                <button>view-project</button>
+                <img className='section-2-img-projects' src='print.svg' />
+                <p>
+                  Plateforme d'une agence d'impression créée avec JavaScript,
+                  HTML et CSS.
+                </p>
+                <a href='https://print-it-3.netlify.app/'>
+                  {" "}
+                  <button>voir_projet</button>
+                </a>
               </div>
             </div>
 
@@ -105,16 +60,24 @@ export default function Projects() {
               <div className='section-2-content-titre'>
                 <p>
                   {" "}
-                  <span>Project 3</span> // _glassy-ui
+                  <span>Project 3</span> // _Les-petits-plats
                 </p>
               </div>
               <div className='section-2-content-main'>
                 <div className='section-2-img-tech'>
                   <img src='icon-css-2.svg' />
                 </div>
-                <img className='section-2-img-projects' src='project-3.svg' />
-                <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-                <button>view-project</button>
+                <img
+                  className='section-2-img-projects'
+                  src='lespetitsplats.svg'
+                />
+                <p>
+                  Site de recettes variées conçu en JavaScript, HTML et CSS.
+                </p>
+                <a href='https://les-petits-plats-sp.netlify.app/'>
+                  {" "}
+                  <button>voir_projet</button>{" "}
+                </a>
               </div>
             </div>
 
@@ -122,16 +85,21 @@ export default function Projects() {
               <div className='section-2-content-titre'>
                 <p>
                   {" "}
-                  <span>Project 4</span> // _nimbus
+                  <span>Project 4</span> // _77events
                 </p>
               </div>
               <div className='section-2-content-main'>
                 <div className='section-2-img-tech'>
                   <img src='icon-vue-2.svg' />
                 </div>
-                <img className='section-2-img-projects' src='project-4.svg' />
-                <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-                <button>view-project</button>
+                <img className='section-2-img-projects' src='77events.svg' />
+                <p>
+                  Site d'une agence événementielle développé en React.js et CSS.
+                </p>
+                <a href='https://724events-6.netlify.app/'>
+                  {" "}
+                  <button>voir_projet</button>
+                </a>
               </div>
             </div>
 
@@ -139,16 +107,18 @@ export default function Projects() {
               <div className='section-2-content-titre'>
                 <p>
                   {" "}
-                  <span>Project 5</span> // _emberize-ui
+                  <span>Project 5</span> // _portfolio
                 </p>
               </div>
               <div className='section-2-content-main'>
                 <div className='section-2-img-tech'>
                   <img src='icon-vue-2.svg' />
                 </div>
-                <img className='section-2-img-projects' src='project-5.svg' />
-                <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-                <button>view-project</button>
+                <img className='section-2-img-projects' src='portfolio.png' />
+                <p>Ancien portfolio développé avec Next.js, React et CSS.</p>
+                <a href='https://portfolio-v2-sp.netlify.app/'>
+                  <button>voir_projet</button>
+                </a>
               </div>
             </div>
           </div>

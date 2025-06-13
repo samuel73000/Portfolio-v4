@@ -11,19 +11,30 @@ export default function About() {
   const [openContacts, setOpenContacts] = useState(false);
   const [openBio, setOpenBio] = useState(false);
   const [openInterests, setOpenInterests] = useState(false);
-  const [openEducation, setOpenEducation] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [displayedContent, setDisplayedContent] = useState({
     title: "Samuel Pouard",
-    content: `/** * About me * I have 5 years of еxperience in web *
-    development lorem ipsum dolor sit amet, * consectetur adipiscing
-    elit, sed do eiusmod * tempor incididunt ut labore et dolore *
-    magna aliqua. Ut enim ad minim veniam, * quis nostrud
-    exercitation ullamco laboris * nisi ut aliquip ex ea commodo
-    consequat. * Duis aute irure dolor in reprehenderit in * * Duis
-    aute irure dolor in reprehenderit in * voluptate velit esse
-    cillum dolore eu fugiat * nulla pariatur. Excepteur sint
-    occaecat * officia deserunt mollit anim id est laborum. */`,
+    content: `/**
+ * À propos de moi
+ *
+ * Je suis doublement diplômé de l'école OpenClassRooms,
+ * avec un diplôme d'intégrateur web et un diplôme de
+ * développeur front-end spécialisé React.
+ *
+ * Après mes études, je me suis lancé en freelance,
+ * où j'exerce depuis plus de 2 ans.
+ *
+ * Mes compétences clés incluent React et Next.js,
+ * avec une forte appétence pour le développement
+ * d'interfaces modernes, performantes et accessibles.
+ *
+ * Ce portfolio a pour objectif de présenter mon travail,
+ * dans l'espoir de trouver à la fois des clients
+ * et des opportunités d'emploi.
+ *
+ * Je privilégie une approche professionnelle,
+ * rigoureuse et orientée résultats.
+ */`,
   });
   const code = `
  function initializeModelChunk<T>(chunk: ResolvedModelChunk): T {
@@ -40,36 +51,48 @@ export default function About() {
       case "bio":
         setDisplayedContent({
           title: "Samuel Pouard",
-          content: `/** * About me * I have 5 years of еxperience in web *
-          development lorem ipsum dolor sit amet, * consectetur adipiscing
-          elit, sed do eiusmod * tempor incididunt ut labore et dolore *
-          magna aliqua. Ut enim ad minim veniam, * quis nostrud
-          exercitation ullamco laboris * nisi ut aliquip ex ea commodo
-          consequat. * Duis aute irure dolor in reprehenderit in * * Duis
-          aute irure dolor in reprehenderit in * voluptate velit esse
-          cillum dolore eu fugiat * nulla pariatur. Excepteur sint
-          occaecat * officia deserunt mollit anim id est laborum. */`,
+          content: `/**
+ * À propos de moi
+ *
+ * Je suis doublement diplômé de l'école OpenClassRooms,
+ * avec un diplôme d'intégrateur web et un diplôme de
+ * développeur front-end spécialisé React.
+ *
+ * Après mes études, je me suis lancé en freelance,
+ * où j'exerce depuis plus de 2 ans.
+ *
+ * Mes compétences clés incluent React et Next.js,
+ * avec une forte appétence pour le développement
+ * d'interfaces modernes, performantes et accessibles.
+ *
+ * Ce portfolio a pour objectif de présenter mon travail,
+ * dans l'espoir de trouver à la fois des clients
+ * et des opportunités d'emploi.
+ *
+ * Je privilégie une approche professionnelle,
+ * rigoureuse et orientée résultats.
+ */
+`,
         });
         setIsHeaderVisible(true);
         break;
       case "interests":
         setDisplayedContent({
           title: "Passion",
-          content: `/** * My interests and passions * I am passionate about web development,
-          * particularly in creating beautiful and * functional user interfaces.
-          * I enjoy exploring new technologies * and staying up to date with
-          * the latest trends in web development. * I also love photography
-          * and outdoor activities. */`,
-        });
-        setIsHeaderVisible(true);
-        break;
-      case "education":
-        setDisplayedContent({
-          title: "High-school",
-          content: `/** * Education * I completed my high school education with
-          * a focus on computer science and mathematics. * This foundation
-          * helped me develop strong analytical * and problem-solving skills
-          * that I use in my daily work. */`,
+          content: `/**
+ * Centres d'intérêt et passions
+ *
+ * Je suis passionné par le développement web,
+ * en particulier par la création d'interfaces
+ * utilisateurs à la fois élégantes et fonctionnelles.
+ *
+ * J'aime explorer de nouvelles technologies
+ * et rester à jour sur les dernières tendances du web.
+ *
+ * En dehors du code, je m'intéresse également
+ * à la photographie et aux activités en plein air.
+ */
+`,
         });
         setIsHeaderVisible(true);
         break;
@@ -88,9 +111,9 @@ export default function About() {
       <Header />
       <main className='main-about'>
         <div className='container-logo'>
-          <img src='/about-menu-icons-1.svg' alt="icons" />
-          <img src='/about-menu-icons-2.svg' alt="icons" />
-          <img src='/about-menu-icons-3.svg' alt="icons" />
+          <img src='/about-menu-icons-1.svg' alt='icons' />
+          <img src='/about-menu-icons-2.svg' alt='icons' />
+          <img src='/about-menu-icons-3.svg' alt='icons' />
         </div>
         <section className='section-about-1'>
           <div className='container-persoInfo-about-1'>
@@ -98,7 +121,7 @@ export default function About() {
               className={"titre-persoInfo-about-1"}
               onClick={() => setOpenInfo((o) => !o)}>
               <img
-              alt="icons"
+                alt='icons'
                 className='fleche-titre-about-1'
                 src='/icon-arrow-about-pleine.svg'
                 style={{
@@ -106,7 +129,7 @@ export default function About() {
                   transition: "transform 0.2s",
                 }}
               />{" "}
-              personal-info
+              Info-personnelles
             </p>
             <div
               className='container-menu-persoInfo-about-1'
@@ -122,19 +145,19 @@ export default function About() {
                 onClick={() => setOpenBio((o) => !o)}
                 style={{ cursor: "pointer" }}>
                 <img
-                alt="icons"
+                  alt='icons'
                   src='/icon-arrow-bio-grise-about.svg'
                   style={{
                     transform: openBio ? "rotate(90deg)" : "rotate(0deg)",
                     transition: "transform 0.2s",
                   }}
                 />
-                <img src='/icon-bio-about.svg' alt="icons" /> bio
+                <img src='/icon-bio-about.svg' alt='icons' /> bio
               </p>
               {openBio && (
                 <div className='content-section-about'>
                   <p>
-                    <img src='icon-markdown-about.svg' alt="icons" />
+                    <img src='icon-markdown-about.svg' alt='icons' />
                     <span
                       onClick={() => handleContentClick("bio")}
                       style={{ cursor: "pointer" }}>
@@ -148,49 +171,23 @@ export default function About() {
                 onClick={() => setOpenInterests((o) => !o)}
                 style={{ cursor: "pointer" }}>
                 <img
-                alt="icons"
+                  alt='icons'
                   src='/icon-arrow-bio-grise-about.svg'
                   style={{
                     transform: openInterests ? "rotate(90deg)" : "rotate(0deg)",
                     transition: "transform 0.2s",
                   }}
                 />
-                <img src='/icon-interests-about.svg' alt="icons" /> interests
+                <img src='/icon-interests-about.svg' alt='icons' />centres-d’intérêt
               </p>
               {openInterests && (
                 <div className='content-section-about'>
                   <p>
-                    <img src='icon-markdown-about.svg' alt="icons" />
+                    <img src='icon-markdown-about.svg' alt='icons' />
                     <span
                       onClick={() => handleContentClick("interests")}
                       style={{ cursor: "pointer" }}>
                       Passsion
-                    </span>
-                  </p>
-                </div>
-              )}
-              <p
-                className='titre-section-about'
-                onClick={() => setOpenEducation((o) => !o)}
-                style={{ cursor: "pointer" }}>
-                <img
-                alt="icons"
-                  src='/icon-arrow-bio-grise-about.svg'
-                  style={{
-                    transform: openEducation ? "rotate(90deg)" : "rotate(0deg)",
-                    transition: "transform 0.2s",
-                  }}
-                />
-                <img src='/icon-education-about.svg' alt="icons" /> education
-              </p>
-              {openEducation && (
-                <div className='content-section-about'>
-                  <p>
-                    <img src='icon-markdown-about.svg' alt="icons"/>
-                    <span
-                      onClick={() => handleContentClick("education")}
-                      style={{ cursor: "pointer" }}>
-                      High-school
                     </span>
                   </p>
                 </div>
@@ -200,7 +197,7 @@ export default function About() {
               className={`contacts-persoInfo-about-1`}
               onClick={() => setOpenContacts((o) => !o)}>
               <img
-              alt="icons"
+                alt='icons'
                 className='fleche-contact-about-1'
                 src='/icon-arrow-about-pleine.svg'
                 style={{
@@ -219,10 +216,12 @@ export default function About() {
                 transition: "opacity 0.2s",
               }}>
               <p>
-                <img src='/icon-mail-about.svg' alt="icons" /> samuelpouardpro@gmail.com
+                <img src='/icon-mail-about.svg' alt='icons' />{" "}
+                samuelpouardpro@gmail.com
               </p>
               <p>
-                <img src='/icon-phone-about.svg' alt="icons" /> +33 7 43 33 55 48
+                <img src='/icon-phone-about.svg' alt='icons' /> +33 7 43 33 55
+                48
               </p>
             </div>
           </div>
@@ -237,7 +236,7 @@ export default function About() {
               }}>
               <p>{displayedContent.title}</p>
               <img
-              alt="icons"
+                alt='icons'
                 src='icon-close.svg'
                 onClick={() => handleContentClick("close")}
                 // style={{ cursor: "pointer" }}
@@ -257,7 +256,7 @@ export default function About() {
               ))}
             </div>
             <div className='texte-content-about-2'>
-              <h1>About me</h1>
+              <h1>À propos de moi</h1>
               <p>{displayedContent.content}</p>
             </div>
           </div>
@@ -272,25 +271,30 @@ export default function About() {
             </div>
 
             <div className='container-content-about-3'>
-              <h2 className='titre-about-3'>// Code snippet showcase:</h2>
+              <h2 className='titre-about-3'>// Extrait de code à l’honneur :</h2>
 
               <div>
                 <div className='container-main-content-code-about-3'>
                   <div className='container-code-texte-content-about-3'>
-                    <img src='avatar-1-about.svg' alt="icons" />
+                    <img src='avatar-1-about.svg' alt='icons' />
                     <div className='container-code-texte-username-all-content-about-3'>
                       <div className='container-code-texte-username-content-about-3'>
                         <h3>@username</h3>
-                        <p>created 5 months ago</p>
+                        <p>créé il y a 5 mois</p>
                       </div>
                       <div className='container-code-texte-details-content-about-3'>
                         <p>
                           {" "}
-                          <img src='Icon-comment-about.svg' alt="icons" /> details
+                          <img src='Icon-comment-about.svg' alt='icons' />{" "}
+                          details
                         </p>
                         <p>
                           {" "}
-                          <img src='Stars-Icon-pleine-about.svg' alt="icons" /> 3 stars
+                          <img
+                            src='Stars-Icon-pleine-about.svg'
+                            alt='icons'
+                          />{" "}
+                          3 stars
                         </p>
                       </div>
                     </div>
@@ -306,20 +310,21 @@ export default function About() {
 
               <div className='container-main-content-code-about-3'>
                 <div className='container-code-texte-content-about-3'>
-                  <img src='avatar-2-about.svg' alt="icons" />
+                  <img src='avatar-2-about.svg' alt='icons' />
                   <div className='container-code-texte-username-all-content-about-3'>
                     <div className='container-code-texte-username-content-about-3'>
                       <h3>@username</h3>
-                      <p>created 5 months ago</p>
+                      <p>créé il y a 5 mois</p>
                     </div>
                     <div className='container-code-texte-details-content-about-3'>
                       <p>
                         {" "}
-                        <img src='Icon-comment-about.svg' alt="icons" /> details
+                        <img src='Icon-comment-about.svg' alt='icons' /> details
                       </p>
                       <p>
                         {" "}
-                        <img src='Stars-Icon-vide-about.svg' alt="icons" /> 3 stars
+                        <img src='Stars-Icon-vide-about.svg' alt='icons' /> 3
+                        stars
                       </p>
                     </div>
                   </div>

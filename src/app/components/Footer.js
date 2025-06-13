@@ -5,7 +5,7 @@ export default function Footer() {
     <footer>
       <div className='footer-all-container'>
         <div className='footer-nav-container'>
-          <p className='footer-nav-name'>Find me in:</p>
+          <p className='footer-nav-name'>Retrouvez-moi sur :</p>
           <p className='footer-nav-hello'>
             {" "}
            <a href="https://www.linkedin.com/in/samuel-pouard/"> <img src='/icon-linkedin.svg' alt='linkedin' /></a>

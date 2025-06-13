@@ -22,7 +22,7 @@ export default function Home() {
           <div className='container-home-text'>
             <div className='container-home-text-content-1'>
               <p className='container-home-text-content-1-text-1'>
-                hi all.I am
+              // Bonjour à tous. Je suis
               </p>
               <h1 className='container-home-text-content-1-text-2'>
                 Samuel Pouard
@@ -45,10 +45,10 @@ export default function Home() {
             </div>
             <div className='container-home-text-content-2'>
               <p className='container-home-text-content-2-text-1'>
-                // complete the game to continue
+                // amusez-vous, puis explorez
               </p>
               <p className='container-home-text-content-2-text-1'>
-                // find my profile on Github
+                // retrouvez mon profil sur Github
               </p>
               <p className='container-home-text-content-2-text-2'>
                 <span>const</span>{" "}
@@ -74,10 +74,10 @@ export default function Home() {
               <div className='container-home-game-content-touche-all'>
                 <div className='container-home-game-content-touche'>
                   <p className='container-home-game-content-touche-text-1'>
-                    // use keyboard
+                    // utilisez le clavier
                   </p>
                   <p className='container-home-game-content-touche-text-1'>
-                    // arrows to play
+                    // les flèches pour jouer
                   </p>
                   <div className='arrow-keys-layout'>
                     <div className='arrow-row'>
@@ -97,7 +97,7 @@ export default function Home() {
 
                 <div className='container-home-game-content-food'>
                   <p className='container-home-game-content-touche-text-1'>
-                    // food left
+                    // nourriture restante
                   </p>
                   <div className='container-home-content-food-img'>
                     {[...Array(foodLeft)].map((_, index) => (
