@@ -12,6 +12,7 @@ export default function About() {
   const [openBio, setOpenBio] = useState(false);
   const [openInterests, setOpenInterests] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [isContentVisible, setIsContentVisible] = useState(true);
   const [displayedContent, setDisplayedContent] = useState({
     title: "Samuel Pouard",
     content: `/**
@@ -75,6 +76,7 @@ export default function About() {
 `,
         });
         setIsHeaderVisible(true);
+        setIsContentVisible(true);
         break;
       case "interests":
         setDisplayedContent({
@@ -95,6 +97,7 @@ export default function About() {
 `,
         });
         setIsHeaderVisible(true);
+        setIsContentVisible(true);
         break;
       case "close":
         setDisplayedContent({
@@ -102,6 +105,7 @@ export default function About() {
           content: "",
         });
         setIsHeaderVisible(false);
+        setIsContentVisible(false);
         break;
     }
   };
@@ -265,12 +269,16 @@ export default function About() {
           </div>
 
           <div className='container-content-about-2'>
-            <div className='numero--content-about-2'>
+            <div
+              className='numero--content-about-2'
+              style={{ display: isContentVisible ? "block" : "none" }}>
               {[...Array(41)].map((_, index) => (
                 <p key={index}>{index + 1}</p>
               ))}
             </div>
-            <div className='texte-content-about-2'>
+            <div
+              className='texte-content-about-2'
+              style={{ display: isContentVisible ? "block" : "none" }}>
               <h1>À propos de moi</h1>
               <p>{displayedContent.content}</p>
             </div>
