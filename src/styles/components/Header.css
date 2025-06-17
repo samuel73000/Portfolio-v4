@@ -76,3 +76,130 @@
 .active {
   border-bottom: 3px solid var(--primary-background, #ffb86a);
 }
+/* responsive  */
+@media (max-width: 1024px) {
+  .header-nav-container {
+    display: none;
+  }
+
+  .header-contact-container {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--theme-foreground, #90a1b9);
+    font-size: 30px;
+    cursor: pointer;
+    padding-right: 20px;
+  }
+
+  .header-all-container {
+    justify-content: space-between;
+    padding: 0 20px; /* Add padding to the header-all-container */
+  }
+  .header-nav-name {
+    padding: 0;
+  }
+  .header-nav-name-menu {
+    padding: 0;
+    color: var(--theme-foreground, #90a1b9);
+    font-family: var(--font-family-text, "Fira Code");
+    font-size: var(--font-size-body-md, 16px);
+    font-style: normal;
+    font-weight: 450;
+    line-height: var(--line-height-body-md, 24px); /* 150% */
+    height: 25px;
+    align-content: center;
+  }
+
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for element's own size */
+    width: 95.5%;
+    height: 99%;
+    background: var(--theme-theme-background, #0F172B);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-out;
+    border-radius: var(--3, 8px);
+
+    border: 1px solid var(--theme-theme-stroke, #314158);
+
+  }
+
+  .mobile-menu-overlay.open {
+    transform: translate(-50%, -50%); /* Ensure it stays centered when open */
+  }
+
+  .mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--theme-theme-stroke, #314158);
+    margin-bottom: 20px;
+  }
+
+  .mobile-menu-header .header-nav-name-menu {
+    padding: 0 20px;
+  }
+
+  .close-icon {
+    background: none;
+    border: none;
+    color: var(--theme-foreground, #90a1b9);
+    font-size: 40px;
+    cursor: pointer;
+    padding: 0 20px;
+  }
+
+  .mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
+  .navigate-text {
+    color: var(--theme-foreground, #90a1b9);
+    font-family: var(--font-family-text, "Fira Code");
+    font-size: var(--font-size-body-md, 20px);
+    font-style: normal;
+    font-weight: 450;
+    line-height: var(--line-height-body-md, 44px);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--theme-theme-stroke, #314158);
+    padding: 0 20px;
+  }
+
+  .mobile-nav-link {
+    color: var(--theme-foreground, #90a1b9);
+    font-family: var(--font-family-text, "Fira Code");
+    font-size: var(--font-size-body-xl, 20px);
+    font-style: normal;
+    font-weight: 450;
+    line-height: var(--line-height-body-xl, 22px);
+    text-decoration: none;
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--theme-theme-stroke, #314158);
+  }
+
+  .mobile-nav-link.active {
+    border-bottom: 1px solid var(--primary-background, #ffb86a);
+    display: inline-block;
+  }
+}
+
+/* Hide hamburger on larger screens */
+@media (min-width: 1025px) {
+  .hamburger-icon,
+  .mobile-menu-overlay {
+    display: none;
+  }
+}

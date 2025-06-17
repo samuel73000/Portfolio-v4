@@ -94,7 +94,7 @@ footer {
   align-content: center;
   padding: 20px;
 }
-
+/* responsive  */
 @media (max-width: 1024px) {
   .footer-all-container {
     width: 100%;
