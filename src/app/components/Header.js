@@ -2,6 +2,7 @@
 import { usePathname } from "next/navigation";
 import "../../styles/components/Header.css";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Header() {
   const pathname = usePathname();
@@ -13,27 +14,38 @@ export default function Header() {
   return (
     <header>
       <div className='header-all-container'>
-        <p className='header-nav-name'>Samuel-Pouard</p>
-        <div className='header-nav-container'>
-          <a
-            href='/'
-            className={`header-nav-hello${pathname === "/" ? " active" : ""}`}>
-            _Home
-          </a>
-          <a
-            href='/about-me'
-            className={`header-nav-about-me${
-              pathname === "/about-me" ? " active" : ""
-            }`}>
-            _À_propos_de_moi
-          </a>
-          <a
-            href='/projects'
-            className={`header-nav-projects${
-              pathname === "/projects" ? " active" : ""
-            }`}>
-            _Projets
-          </a>
+        <div className='header-left-group'>
+          <img
+            src='/michael-weaver.svg'
+            alt='Michael Weaver'
+            className='michael-weaver-logo-mobile'
+          />
+          <Link href='/' className='logo-link'>
+            <p className='header-nav-name'>Samuel-Pouard</p>
+          </Link>
+          <div className='header-nav-container'>
+            <a
+              href='/'
+              className={`header-nav-hello${
+                pathname === "/" ? " active" : ""
+              }`}>
+              _Home
+            </a>
+            <a
+              href='/about-me'
+              className={`header-nav-about-me${
+                pathname === "/about-me" ? " active" : ""
+              }`}>
+              _À_propos_de_moi
+            </a>
+            <a
+              href='/projects'
+              className={`header-nav-projects${
+                pathname === "/projects" ? " active" : ""
+              }`}>
+              _Projets
+            </a>
+          </div>
         </div>
         <div className='header-contact-container'>
           <a

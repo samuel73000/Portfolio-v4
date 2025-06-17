@@ -17,6 +17,43 @@
   flex-wrap: wrap;
 }
 
+.container-logo img {
+  display: block; /* Visible by default (desktop) */
+  width: 32px;
+  height: 32px;
+}
+
+.apropos-mobile-text {
+  display: none; /* Hidden by default (desktop) */
+}
+
+@media (max-width: 1024px) {
+  .main-about {
+    flex-direction: column;
+  }
+  .container-logo {
+    width: 100%;
+    height: auto;
+    padding: 12px 24px;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 16px;
+    
+  }
+  .container-logo img {
+    display: none; /* Hide images on mobile */
+  }
+  .apropos-mobile-text {
+    display: block;
+    color: var(--primitive-slate-50, #f8fafc);
+    font-family: var(--font-family-text, "Fira Code");
+    font-size: var(--font-size-body-md, 16px);
+    font-style: normal;
+    font-weight: 450;
+    line-height: var(--line-height-body-md, 24px);
+  }
+}
+
 .container-persoInfo-about-1 {
   display: flex;
   padding: var(--4, 12px);
@@ -30,6 +67,42 @@
   height: 84.55vh;
   position: relative;
 }
+
+@media (max-width: 1024px) {
+  .container-persoInfo-about-1 {
+    width: 100%;
+    height: auto;
+    border: none;
+    padding: 0;
+  }
+  .titre-persoInfo-about-1,
+  .contacts-persoInfo-about-1 {
+    padding: 12px;
+    border-bottom: 1px solid #314158;
+    width: calc(100% - 24px);
+    margin: 0 12px;
+  }
+  .titre-persoInfo-about-1::after,
+  .container-menu-persoInfo-about-1::after,
+  .contacts-persoInfo-about-1::after {
+    content: none;
+  }
+  .container-menu-persoInfo-about-1 {
+    width: 100%;
+    padding: 0;
+  }
+  .container-menu-persoInfo-about-1 p {
+    padding: 12px;
+  }
+  .content-section-about {
+    margin-left: 0;
+  }
+  .container-persoInfo-mail-about-1 {
+    padding: 12px;
+    width: calc(100% - 24px);
+  }
+}
+
 .content-section-about {
   margin-left: 13.5%;
 }
@@ -49,6 +122,11 @@
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  margin: 0;
+
+  border-bottom: 0px;
+
+background: var(--primitive-slate-700, #314158);
 }
 
 .titre-persoInfo-about-1::after {
@@ -78,6 +156,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  border: none;
 }
 .container-menu-persoInfo-about-1::after {
   content: "";
@@ -108,6 +187,9 @@
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  margin: 0;
+  margin-top: 5px;
+  background: var(--primitive-slate-700, #314158);
 }
 .contacts-persoInfo-about-1::after {
   content: "";
@@ -149,6 +231,32 @@
   flex: 1;
   min-width: 0; /* Permet à la section de se rétrécir en dessous de sa largeur de contenu */
 }
+
+@media (max-width: 1024px) {
+  .section-about-2 {
+    width: 100%;
+    padding: 0;
+  }
+  .container-header-all-about-2 {
+    flex-direction: column;
+  }
+  .container-header-about-2 {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    border-right: none;
+    border-left: none;
+    padding: 12px 24px;
+  }
+  .container-header-2-about-2 {
+    display: none;
+  }
+  .container-content-about-2 {
+    flex-direction: row;
+    padding: 12px 24px;
+  }
+}
+
 .container-header-all-about-2 {
   display: flex;
 }
@@ -238,6 +346,34 @@
 .section-about-3 {
   flex: 1;
   min-width: 0; /* Permet à la section de se rétrécir en dessous de sa largeur de contenu */
+}
+
+@media (max-width: 1024px) {
+  .section-about-3 {
+    width: 100%;
+    padding: 0;
+  }
+  .container-header-about-3 {
+    display: none;
+  }
+  .container-content-all-about-3 {
+    flex-direction: column;
+  }
+  .container-content-left-about-3,
+  .container-content-right-about-3 {
+    display: none;
+  }
+  .container-content-about-3 {
+    width: 100%;
+    padding: 12px 24px;
+  }
+  .container-main-content-code-about-3 {
+    margin-top: 20px;
+  }
+  .container-code-texte-details-content-about-3 {
+    width: auto;
+    gap: 10px;
+  }
 }
 
 .container-header-about-3 {
@@ -373,4 +509,9 @@
   border-radius: var(--4, 16px);
   border: 1px solid var(--theme-theme-stroke, #314158);
   background: var(--theme-theme-backdrop, #020618);
+}
+
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!! responsive!!!!!!!!!!!!!!!!!! */
+
+@media (max-width: 1024px) {
 }

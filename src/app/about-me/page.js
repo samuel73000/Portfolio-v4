@@ -111,9 +111,22 @@ export default function About() {
       <Header />
       <main className='main-about'>
         <div className='container-logo'>
-          <img src='/about-menu-icons-1.svg' alt='icons' />
-          <img src='/about-menu-icons-2.svg' alt='icons' />
-          <img src='/about-menu-icons-3.svg' alt='icons' />
+          <img
+            src='/about-menu-icons-1.svg'
+            alt='icons'
+            className='about-menu-icon'
+          />
+          <img
+            src='/about-menu-icons-2.svg'
+            alt='icons'
+            className='about-menu-icon'
+          />
+          <img
+            src='/about-menu-icons-3.svg'
+            alt='icons'
+            className='about-menu-icon'
+          />
+          <p className='apropos-mobile-text'>_a-propos-de-moi</p>
         </div>
         <section className='section-about-1'>
           <div className='container-persoInfo-about-1'>
@@ -178,7 +191,8 @@ export default function About() {
                     transition: "transform 0.2s",
                   }}
                 />
-                <img src='/icon-interests-about.svg' alt='icons' />centres-d’intérêt
+                <img src='/icon-interests-about.svg' alt='icons' />
+                centres-d'intérêt
               </p>
               {openInterests && (
                 <div className='content-section-about'>
@@ -193,6 +207,7 @@ export default function About() {
                 </div>
               )}
             </div>
+
             <p
               className={`contacts-persoInfo-about-1`}
               onClick={() => setOpenContacts((o) => !o)}>
@@ -271,7 +286,9 @@ export default function About() {
             </div>
 
             <div className='container-content-about-3'>
-              <h2 className='titre-about-3'>// Extrait de code à l’honneur :</h2>
+              <h2 className='titre-about-3'>
+                // Extrait de code à l'honneur :
+              </h2>
 
               <div>
                 <div className='container-main-content-code-about-3'>
