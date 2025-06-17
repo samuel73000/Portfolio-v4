@@ -3,6 +3,8 @@
   flex-direction: row;
   width: 100%;
   overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
 }
 .container-logo {
   display: flex;
@@ -30,6 +32,7 @@
 @media (max-width: 1024px) {
   .main-about {
     flex-direction: column;
+    min-height: auto;
   }
   .container-logo {
     width: 100%;
@@ -58,12 +61,14 @@
   padding: var(--4, 12px);
   flex-direction: column;
   align-items: flex-start;
-
   align-self: stretch;
   border: solid 1px #314158;
   border-top: none;
+  border-bottom: none;
   width: 200px;
-  height: 84.55vh;
+  height: calc(
+    100vh - 65px
+  ); /* Hauteur de la fenêtre moins la hauteur du header */
   position: relative;
 }
 
@@ -73,6 +78,7 @@
     height: auto;
     border: none;
     padding: 0;
+    margin-top: 0;
   }
   .titre-persoInfo-about-1,
   .contacts-persoInfo-about-1 {
@@ -340,22 +346,24 @@
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!section 3 !!!!!!!!!!!!!!!!!!!!!!! */
 .section-about-3 {
   flex: 1;
-  min-width: 0; /* Permet à la section de se rétrécir en dessous de sa largeur de contenu */
+  min-width: 0;
+  height: calc(100vh - 65px);
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 1024px) {
   .section-about-3 {
-    width: 100%;
-    padding: 0;
-  }
-  .container-header-about-3 {
-    display: none;
+    height: auto;
   }
   .container-content-all-about-3 {
     flex-direction: column;
   }
   .container-content-left-about-3,
   .container-content-right-about-3 {
+    display: none;
+  }
+  .container-header-about-3 {
     display: none;
   }
   .container-content-about-3 {
@@ -382,15 +390,17 @@
 .container-content-all-about-3 {
   display: flex;
   flex-direction: row;
+  height: 100%;
 }
 .container-content-left-about-3 {
   border: 1px solid #314158;
   border-top: none;
   border-bottom: none;
   width: 40px;
-  height: 81.1vh;
+  height: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .container-content-right-about-3 {
   border: 1px solid #314158;
@@ -398,9 +408,10 @@
   border-bottom: none;
   border-right: none;
   width: 40px;
-  height: 81.1vh;
+  height: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .bloc-about {
   width: 60%;
