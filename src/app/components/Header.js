@@ -80,7 +80,7 @@ export default function Header() {
                 pathname === "/about-me" ? " active" : ""
               }`}
               onClick={toggleMobileMenu}>
-              _about-me
+              _À_propos_de_moi
             </a>
             <a
               href='/projects'
@@ -88,7 +88,7 @@ export default function Header() {
                 pathname === "/projects" ? " active" : ""
               }`}
               onClick={toggleMobileMenu}>
-              _projects
+              _Projets
             </a>
             <a
               href='/contact-me'
@@ -96,7 +96,7 @@ export default function Header() {
                 pathname === "/contact-me" ? " active" : ""
               }`}
               onClick={toggleMobileMenu}>
-              _contact-me
+              _Me_Contacter
             </a>
           </div>
         </div>

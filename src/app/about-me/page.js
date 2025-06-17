@@ -130,7 +130,7 @@ export default function About() {
             alt='icons'
             className='about-menu-icon'
           />
-          <p className='apropos-mobile-text'>_a-propos-de-moi</p>
+          <p className='apropos-mobile-text'>_À-propos-de-moi</p>
         </div>
         <section className='section-about-1'>
           <div className='container-persoInfo-about-1'>
