@@ -1,9 +1,8 @@
-footer{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
-
 
 .footer-all-container {
   display: flex;
@@ -19,7 +18,19 @@ footer{
   flex-direction: row;
 }
 
-.footer-nav-name {
+.footer-nav-name-1 {
+  color: var(--theme-foreground, #90a1b9);
+  font-family: var(--font-family-text, "Fira Code");
+  font-size: var(--font-size-body-md, 16px);
+  font-style: normal;
+  font-weight: 450;
+  line-height: var(--line-height-body-md, 24px); /* 150% */
+  height: 65px;
+  align-content: center;
+  padding: 20px;
+}
+
+.footer-nav-name-2 {
   color: var(--theme-foreground, #90a1b9);
   font-family: var(--font-family-text, "Fira Code");
   font-size: var(--font-size-body-md, 16px);
@@ -82,4 +93,30 @@ footer{
   height: 65px;
   align-content: center;
   padding: 20px;
+}
+
+@media (max-width: 1024px) {
+  .footer-all-container {
+    width: 100%;
+  }
+  .footer-nav-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .footer-nav-name-1 {
+    width: 100%;
+  }
+  .footer-nav-name-2 {
+    display: none;
+    visibility: hidden;
+    position: absolute;
+  }
+  .footer-nav-hello {
+    border-right: 0px solid var(--theme-theme-stroke, #314158);
+  }
+  .footer-nav-contact span {
+    display: none;
+  }
+  
 }
