@@ -2,7 +2,6 @@
 import { usePathname } from "next/navigation";
 import "../../styles/components/Header.css";
 import { useState } from "react";
-import Link from "next/link";
 
 export default function Header() {
   const pathname = usePathname();
@@ -15,14 +14,7 @@ export default function Header() {
     <header>
       <div className='header-all-container'>
         <div className='header-left-group'>
-          <img
-            src='/michael-weaver.svg'
-            alt='Michael Weaver'
-            className='michael-weaver-logo-mobile'
-          />
-          <Link href='/' className='logo-link'>
-            <p className='header-nav-name'>Samuel-Pouard</p>
-          </Link>
+          <p className='header-nav-name'>Samuel-Pouard</p>
           <div className='header-nav-container'>
             <a
               href='/'
@@ -53,7 +45,7 @@ export default function Header() {
             className={`header-nav-contact${
               pathname === "/contact-me" ? " active" : ""
             }`}>
-            _Me_Contacter{" "}
+            _Me_Contacter
           </a>
         </div>
         <button className='hamburger-icon' onClick={toggleMobileMenu}>
