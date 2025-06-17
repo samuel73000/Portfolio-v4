@@ -47,7 +47,7 @@ export default function Home() {
               <p className='container-home-text-content-2-text-1'>
                 // amusez-vous, puis explorez
               </p>
-              <p className='container-home-text-content-2-text-1'>
+              <p className='container-home-text-content-2-text-11'>
                 // retrouvez mon profil sur Github
               </p>
               <p className='container-home-text-content-2-text-2'>
