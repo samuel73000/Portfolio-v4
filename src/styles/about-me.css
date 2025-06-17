@@ -67,7 +67,7 @@
   border-bottom: none;
   width: 200px;
   height: calc(
-    100vh - 65px
+    93.2vh - 65px
   ); /* Hauteur de la fenêtre moins la hauteur du header */
   position: relative;
 }
@@ -347,7 +347,7 @@
 .section-about-3 {
   flex: 1;
   min-width: 0;
-  height: calc(100vh - 65px);
+  height: calc(93.2vh - 65px);
   display: flex;
   flex-direction: column;
 }

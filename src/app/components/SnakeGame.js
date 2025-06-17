@@ -277,7 +277,7 @@ export default function SnakeGame({ onFoodLeftChange, onGameEnd }) {
             {foodLeft === 0 ? "	GAGNÉ !" : "	PERDU "}
           </div>
           <button className='snake-gameover-btn btn-snake' onClick={startGame}>
-          Recommencer
+            Recommencer
           </button>
         </div>
       )}
