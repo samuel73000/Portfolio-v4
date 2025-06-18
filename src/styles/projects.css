@@ -104,3 +104,18 @@
   border: none;
   cursor: pointer;
 }
+@media (max-width: 1024px) {
+  
+  .section-2-content {
+    padding: var(--5, 32px) var(--5, 32px) 0px var(--5, 32px);
+  }
+  .section-2-content-main p {
+    font-size: var(--font-size-body-lg, 15px);
+    line-height: var(--line-height-body-lg, 27px);
+  }
+  .section-2-img-projects {
+    width: 100%;
+    height: 50%;
+    padding-bottom: 20px;
+  }
+}

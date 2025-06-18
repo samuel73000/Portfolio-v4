@@ -177,6 +177,7 @@
 .container-home-game-content-game {
   width: 65%;
   position: relative;
+  border-radius: 12px;
 }
 .container-home-game-content-touche-all {
   display: flex;
