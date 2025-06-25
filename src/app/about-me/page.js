@@ -130,7 +130,7 @@ export default function About() {
             alt='icons'
             className='about-menu-icon'
           />
-          <p className='apropos-mobile-text'>_À-propos-de-moi</p>
+          <p className='apropos-mobile-text'>_À-propos</p>
         </div>
         <section className='section-about-1'>
           <div className='container-persoInfo-about-1'>
@@ -279,7 +279,8 @@ export default function About() {
             <div
               className='texte-content-about-2'
               style={{ display: isContentVisible ? "block" : "none" }}>
-              <h1>À propos de moi</h1>
+              <h1 className='desktop-title'>À propos de moi</h1>
+              <h1 className='mobile-title'>À propos</h1>
               <p>{displayedContent.content}</p>
             </div>
           </div>

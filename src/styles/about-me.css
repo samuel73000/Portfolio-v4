@@ -254,6 +254,24 @@
   text-align: center;
 }
 
+.desktop-title {
+  display: block;
+}
+
+.mobile-title {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .desktop-title {
+    display: none;
+  }
+
+  .mobile-title {
+    display: block;
+  }
+}
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!section 3 !!!!!!!!!!!!!!!!!!!!!!! */
 .section-about-3 {
   flex: 1;
@@ -423,13 +441,7 @@
     display: none; /* Hide images on mobile */
   }
   .apropos-mobile-text {
-    display: block;
-    color: var(--primitive-slate-50, #f8fafc);
-    font-family: var(--font-family-text, "Fira Code");
-    font-size: var(--font-size-body-md, 16px);
-    font-style: normal;
-    font-weight: 450;
-    line-height: var(--line-height-body-md, 24px);
+    display: none; /* Hide the text on mobile */
   }
 }
 
