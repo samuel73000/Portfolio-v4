@@ -3,6 +3,7 @@
   flex-direction: row;
   width: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
   height: 100vh;
   position: relative;
 }
@@ -182,7 +183,7 @@
   font-style: normal;
   font-weight: 450;
   line-height: var(--line-height-body-md, 24px); /* 150% */
-  height: 48px;
+  height: 46px;
   box-sizing: border-box;
   align-items: center;
   gap: 8px;
@@ -213,7 +214,7 @@
 }
 .container-header-2-about-2 {
   width: 100vw;
-  height: 48px;
+  height: 46px;
   border: 1px solid #314158;
   border-top: none;
   border-left: none;
