@@ -212,6 +212,20 @@
   align-self: flex-start;
   margin-left: 5px;
 }
+
+
+@media (max-height: 980px) {
+  .container-home-game-content-touche-text-1 {
+    
+    font-size: var(--font-size-body-sm, 11px);
+   
+  }
+}
+
+
+
+
+
 .arrow-keys-layout {
   display: flex;
   flex-direction: column;
@@ -254,7 +268,18 @@
   justify-content: left;
   width: 100%;
   flex-wrap: wrap;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  max-height: none; /* pas de limite par défaut */
 }
+
+/* Sur petits écrans : limite la hauteur et active scroll si dépassement */
+@media (max-height: 980px) {
+  .container-home-content-food-img {
+    max-height: 100px;
+  }
+}
+
 
 .btn-home-game-content-touche {
   color: var(--theme-heading-foreground, #f8fafc);
