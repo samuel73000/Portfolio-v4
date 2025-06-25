@@ -31,7 +31,7 @@
   align-self: stretch;
   align-content: center;
   width: 100%;
-  height: 1200px;
+  height: 100vh;
 }
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!texte et titre!!!!!!!!!!!!!!!!!!!! */
 .container-home-text {
@@ -172,9 +172,10 @@
   justify-content: center;
   align-items: center;
   width: 60%;
-  height: 50%;
+  height: 50vh;
 }
 .container-home-game-content-game {
+  height: 100%;
   width: 65%;
   position: relative;
   border-radius: 12px;
@@ -278,7 +279,7 @@
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!! responsive!!!!!!!!!!!!!!!!!! */
 
 @media (max-width: 1024px) {
-   .effet-green-home,
+  .effet-green-home,
   .effet-bleu-home {
     top: 8%;
     left: 0%;
@@ -287,10 +288,10 @@
     top: 15%;
     left: 0%;
   }
-  
+
   /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!texte et titre!!!!!!!!!!!!!!!!!!!! */
   .container-home-all {
-    height:600px;
+    height: 600px;
   }
   .container-home-text {
     width: 80%;
@@ -300,22 +301,22 @@
   .container-home-text-content-1-text-1 {
     font-size: var(--font-size-body-lg, 16px);
   }
-  
+
   .container-home-text-content-1-text-2 {
     font-size: var(--font-size-heading-h1, 45px);
   }
-  
+
   .container-home-text-content-1-text-3 {
     font-size: var(--font-size-heading-h4, 16px);
-    width:80vw;
+    width: 80vw;
   }
-  
+
   .container-home-text-content-2-text-1 {
     display: none;
   }
-  .container-home-text-content-2-text-11{
+  .container-home-text-content-2-text-11 {
     font-size: var(--font-size-heading-h4, 16px);
-    width:80vw;
+    width: 80vw;
   }
   .container-home-text-content-2-text-2 {
     font-size: var(--font-size-body-md, 16px);
@@ -326,47 +327,8 @@
   .span-home-3 {
     font-size: var(--font-size-body-md, 16px);
   }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   .container-home-game {
     display: none;
   }
-
-
-
-
-
-
 }
