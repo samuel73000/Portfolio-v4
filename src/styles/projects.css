@@ -119,3 +119,11 @@
     padding-bottom: 20px;
   }
 }
+@media (max-height: 1070px) {
+  .section-2-content-all {
+    max-height: 80vh;         /* Limite à la hauteur de l'écran */
+    overflow-y: auto; 
+    margin-bottom: 50px;         /* Scroll si ça déborde */
+  }
+}
+

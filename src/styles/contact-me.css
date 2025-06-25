@@ -5,7 +5,7 @@
 
 .section-1 {
   width: 270px;
-  height: 84.5vh;
+  height: 100vh;
   min-width: 270px;
   max-width: 270px;
   overflow-x: hidden;
@@ -154,7 +154,7 @@
 
 .section-3-container-right {
   width: 40px;
-  height: 81vh;
+  height: 100vh;
   border-left: 1px solid var(--theme-theme-stroke, #314158);
   margin-top: -82px;
   margin-right: -40px;
