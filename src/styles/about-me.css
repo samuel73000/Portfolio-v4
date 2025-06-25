@@ -43,7 +43,7 @@
   /* height: calc(
     93.2vh - 65px
   );  */
-  height: 86.9%;
+  height: 100%;
   position: relative;
 }
 
@@ -226,7 +226,7 @@
   gap: 40px;
   display: flex;
   flex-direction: row;
-  max-height: 80%;
+  max-height: 100%;
   overflow-y: auto;
 }
 .numero--content-about-2 {
@@ -288,7 +288,7 @@
 
 .container-header-about-3 {
   height: 48px;
-  width: 180%;
+  width: 100%;
   border: 1px solid #314158;
   border-top: none;
   border-left: none;
@@ -297,7 +297,7 @@
 .container-content-all-about-3 {
   display: flex;
   flex-direction: row;
-  height: 83.2%;
+  height: 100%;
 }
 .container-content-left-about-3 {
   border: 1px solid #314158;

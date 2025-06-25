@@ -1,17 +1,23 @@
 footer {
+  margin-top: auto;
+  width: 100%;
+  height: 65px;
+  border-top: 1px solid #314158;
   position: absolute;
   bottom: 0;
-  width: 100%;
+  background-color: #0f172b;
 }
+
+
 
 .footer-all-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
-  width: 100%;
-  border-top: 1px solid var(--theme-theme-stroke, #314158);
-  height: 65px;
+  /* width: 100%; */
+  /* border-top: 1px solid var(--theme-theme-stroke, #314158); */
+  /* height: 65px; */
 }
 .footer-nav-container {
   display: flex;
