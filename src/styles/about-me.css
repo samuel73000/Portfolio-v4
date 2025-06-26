@@ -554,5 +554,6 @@
   .container-content-about-2 {
     flex-direction: row;
     padding: 12px 24px;
+    padding-bottom: 300px;
   }
 }

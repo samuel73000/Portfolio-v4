@@ -6,6 +6,7 @@ footer {
   position: absolute;
   bottom: 0;
   background-color: #0f172b;
+  z-index: 10000;
 }
 
 
