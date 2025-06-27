@@ -10,6 +10,7 @@ export default function Home() {
   const [foodLeft, setFoodLeft] = useState(30); // AJOUTE CETTE LIGNE
 
   return (
+    
     <section className='section-home'>
       <Header />
       <main>

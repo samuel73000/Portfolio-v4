@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Fond transparent -->
+  
+  <!-- Initiales SP stylisées -->
+  <g fill="#00d4aa" stroke="#00ffcc" stroke-width="0.5">
+    <!-- Lettre S -->
+    <path d="M6 8 Q6 6 8 6 L12 6 Q14 6 14 8 Q14 10 12 10 L10 10 Q8 10 8 12 Q8 14 10 14 L12 14 Q14 14 14 16 Q14 18 12 18 L8 18 Q6 18 6 16" fill="none" stroke-width="1.5"/>
+    
+    <!-- Lettre P -->
+    <rect x="18" y="6" width="2" height="12" />
+    <path d="M18 6 L24 6 Q26 6 26 8 L26 10 Q26 12 24 12 L18 12" fill="none" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Effet de glow/pixels pour le style rétro -->
+  <g fill="#00ffcc" opacity="0.3">
+    <rect x="4" y="4" width="1" height="1"/>
+    <rect x="27" y="4" width="1" height="1"/>
+    <rect x="4" y="27" width="1" height="1"/>
+    <rect x="27" y="27" width="1" height="1"/>
+  </g>
+</svg>
