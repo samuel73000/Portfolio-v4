@@ -13,17 +13,16 @@ export default function Projects() {
             <div className='section-2-content'>
               <div className='section-2-content-titre'>
                 <p>
-                  {" "}
-                  <span>Project 1</span> // _Kasa
+                  <span>Project 1</span> // _Popsy
                 </p>
               </div>
               <div className='section-2-content-main'>
-                <img className='section-2-img-projects' src='kasa.svg' />
+                <img className='section-2-img-projects' src='popsy.png' />
                 <p>
-                  Plateforme de réservation de logements réalisée avec React,
-                  Redux et Ts.
+                  Site de présentation moderne et rapide pour un éditeur de site
+                  Notion. Développé en Next.js.
                 </p>
-                <a href='https://kasa-4.netlify.app/'>
+                <a href='https://popsy.co' target='_blank'>
                   <button>voir_projet</button>
                 </a>
               </div>
@@ -32,17 +31,16 @@ export default function Projects() {
             <div className='section-2-content'>
               <div className='section-2-content-titre'>
                 <p>
-                  {" "}
-                  <span>Project 2</span> // _Print-it
+                  <span>Project 2</span> // _Typogram
                 </p>
               </div>
               <div className='section-2-content-main'>
-                <img className='section-2-img-projects' src='print.svg' />
+                <img className='section-2-img-projects' src='typogram.png' />
                 <p>
-                  Plateforme d'une agence d'impression créée avec JavaScript,
-                  HTML et CSS.
+                  Landing page épurée pour un outil de création de logos. Conçu
+                  avec Next.js et Tailwind.
                 </p>
-                <a href='https://print-it-3.netlify.app/'>
+                <a href='https://typogram.co' target='_blank'>
                   <button>voir_projet</button>
                 </a>
               </div>
@@ -51,19 +49,16 @@ export default function Projects() {
             <div className='section-2-content'>
               <div className='section-2-content-titre'>
                 <p>
-                  {" "}
-                  <span>Project 3</span> // _Les-petits-plats
+                  <span>Project 3</span> // _Linear
                 </p>
               </div>
               <div className='section-2-content-main'>
-                <img
-                  className='section-2-img-projects'
-                  src='lespetitsplats.svg'
-                />
+                <img className='section-2-img-projects' src='linear.png' />
                 <p>
-                  Site de recettes variées conçu en JavaScript, HTML et CSS.
+                  Interface moderne d'outil de gestion de projets. Fait en
+                  Next.js avec animations fluides.
                 </p>
-                <a href='https://les-petits-plats-sp.netlify.app/'>
+                <a href='https://linear.app' target='_blank'>
                   <button>voir_projet</button>
                 </a>
               </div>
@@ -72,16 +67,16 @@ export default function Projects() {
             <div className='section-2-content'>
               <div className='section-2-content-titre'>
                 <p>
-                  {" "}
-                  <span>Project 4</span> // _77events
+                  <span>Project 4</span> // _Paul James Photography
                 </p>
               </div>
               <div className='section-2-content-main'>
-                <img className='section-2-img-projects' src='77events.svg' />
+                <img className='section-2-img-projects' src='pauljames.png' />
                 <p>
-                  Site d'une agence événementielle développé en React.js et CSS.
+                  Portfolio d'un photographe. Design minimaliste avec galerie
+                  responsive sous WordPress.
                 </p>
-                <a href='https://724events-6.netlify.app/'>
+                <a href='https://www.pauljamesphotography.com' target='_blank'>
                   <button>voir_projet</button>
                 </a>
               </div>
@@ -90,14 +85,90 @@ export default function Projects() {
             <div className='section-2-content'>
               <div className='section-2-content-titre'>
                 <p>
-                  {" "}
-                  <span>Project 5</span> // _portfolio
+                  <span>Project 5</span> // _Eleven Madison Park
                 </p>
               </div>
               <div className='section-2-content-main'>
-                <img className='section-2-img-projects' src='portfolio.png' />
-                <p>Ancien portfolio développé avec Next.js, React et CSS.</p>
-                <a href='https://portfolio-v2-sp.netlify.app/'>
+                <img className='section-2-img-projects' src='eleven.png' />
+                <p>
+                  Site d'un restaurant étoilé. Expérience immersive, intégration
+                  réservation et menu.
+                </p>
+                <a href='https://www.elevenmadisonpark.com' target='_blank'>
+                  <button>voir_projet</button>
+                </a>
+              </div>
+            </div>
+
+            <div className='section-2-content'>
+              <div className='section-2-content-titre'>
+                <p>
+                  <span>Project 6</span> // _Blue Star Coffee
+                </p>
+              </div>
+              <div className='section-2-content-main'>
+                <img className='section-2-img-projects' src='bluestar.png' />
+                <p>
+                  Boutique WooCommerce pour torréfacteur local. Mise en avant
+                  des produits et blog intégré.
+                </p>
+                <a
+                  href='https://www.bluestarcoffeeroasters.com'
+                  target='_blank'>
+                  <button>voir_projet</button>
+                </a>
+              </div>
+            </div>
+
+            <div className='section-2-content'>
+              <div className='section-2-content-titre'>
+                <p>
+                  <span>Project 7</span> // _Soapbox
+                </p>
+              </div>
+              <div className='section-2-content-main'>
+                <img className='section-2-img-projects' src='soapbox.png' />
+                <p>
+                  Boutique en ligne simple et efficace sous WooCommerce.
+                  Produits d'hygiène naturelle.
+                </p>
+                <a href='https://soapboxsoaps.com' target='_blank'>
+                  <button>voir_projet</button>
+                </a>
+              </div>
+            </div>
+
+            <div className='section-2-content'>
+              <div className='section-2-content-titre'>
+                <p>
+                  <span>Project 8</span> // _Gymshark
+                </p>
+              </div>
+              <div className='section-2-content-main'>
+                <img className='section-2-img-projects' src='gymshark.png' />
+                <p>
+                  Site officiel de la marque de sport. Shopify avancé avec UI
+                  personnalisée.
+                </p>
+                <a href='https://www.gymshark.com' target='_blank'>
+                  <button>voir_projet</button>
+                </a>
+              </div>
+            </div>
+
+            <div className='section-2-content'>
+              <div className='section-2-content-titre'>
+                <p>
+                  <span>Project 9</span> // _Allbirds
+                </p>
+              </div>
+              <div className='section-2-content-main'>
+                <img className='section-2-img-projects' src='allbirds.png' />
+                <p>
+                  E-commerce Shopify écoresponsable. Design sobre et rapide,
+                  optimisé pour mobile.
+                </p>
+                <a href='https://www.allbirds.com' target='_blank'>
                   <button>voir_projet</button>
                 </a>
               </div>
@@ -105,6 +176,7 @@ export default function Projects() {
           </div>
         </section>
       </main>
+
       <Footer />
     </section>
   );

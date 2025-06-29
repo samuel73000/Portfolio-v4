@@ -16,6 +16,8 @@
   flex-wrap: wrap;
   width: 100%;
   gap: clamp(8px, 4vw, 46px);
+  max-height: 85vh;         /* Limite à la hauteur de l'écran */
+  overflow-y: auto; 
 }
 
 .section-2-content {
